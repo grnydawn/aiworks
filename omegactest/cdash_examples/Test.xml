@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="unitest-develop-gnu"
+	BuildStamp="20251101-0601-Experimental"
+	Name="chrysalis"
+	Generator="ctest-3.24.2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="chr-0238"
+	OSRelease="4.18.0-513.5.1.el8_9.x86_64"
+	OSVersion="#1 SMP Fri Sep 29 05:21:10 EDT 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="23"
+	ModelID="49"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="128"
+	NumberOfPhysicalCPU="64"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="257143"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2400"
+	>
+	<Testing>
+		<StartDateTime>Nov 01 01:02 CDT</StartDateTime>
+		<StartTestTime>1761976957</StartTestTime>
+		<TestList>
+			<Test>./test/DATA_TYPES_TEST</Test>
+			<Test>./test/MACHINE_ENV_TEST</Test>
+			<Test>./test/BROADCAST_TEST</Test>
+			<Test>./test/LOGGING_TEST</Test>
+			<Test>./test/ERROR_TEST</Test>
+			<Test>./test/DECOMP_NTASK1_TEST</Test>
+			<Test>./test/DECOMP_NTASK8_TEST</Test>
+			<Test>./test/HALO_TEST</Test>
+			<Test>./test/DIMENSION_TEST</Test>
+			<Test>./test/HORZMESH_TEST</Test>
+			<Test>./test/HORZOPERATORS_PLANE_TEST</Test>
+			<Test>./test/HORZOPERATORS_SPHERE_TEST</Test>
+			<Test>./test/AUXVARS_PLANE_TEST</Test>
+			<Test>./test/AUXVARS_SPHERE_TEST</Test>
+			<Test>./test/AUXSTATE_TEST</Test>
+			<Test>./test/IO_TEST</Test>
+			<Test>./test/CONFIG_TEST</Test>
+			<Test>./test/FIELD_TEST</Test>
+			<Test>./test/IOSTREAM_TEST</Test>
+			<Test>./test/TEND_PLANE_TEST</Test>
+			<Test>./test/TEND_PLANE_SINGLE_PRECISION_TEST</Test>
+			<Test>./test/TEND_SPHERE_TEST</Test>
+			<Test>./test/TENDENCIES_TEST</Test>
+			<Test>./test/STATE_TEST</Test>
+			<Test>./test/TIMEMGR_TEST</Test>
+			<Test>./test/REDUCTIONS_TEST</Test>
+			<Test>./test/TIMESTEPPER_TEST</Test>
+			<Test>./test/KOKKOS_TEST</Test>
+			<Test>./test/DRIVER_TEST</Test>
+			<Test>./test/TRACERS_TEST</Test>
+			<Test>./test/TRIDIAGSOLVERS_TEST</Test>
+			<Test>./test/GSWC_CALL_TEST</Test>
+			<Test>./test/EOS_TEST</Test>
+			<Test>./test/VERTCOORD_TEST</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>DATA_TYPES_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/DATA_TYPES_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testDataTypes.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.402133</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testDataTypes.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNkWFr2zAQhr/vV7wfN8hcu0nsWJBCmnYjbElMR9mglCDbl0bEljzpnJb9+knOYBQK+zqBxEm6e5/3uFjgIcnSJM/SfJpFWT7J4vEjHqqD/RhfjmciifPLWZaK+BFh9VW3q4xmeuGoEkk+TXC//AF8X9xt4MMCi2KFE1mnjIZyULoybSdZlQ0JWPrZK0s1ruZIoiQdQVbcyyZcJlGM942Rtf/eW9Pionf2olFlOgmnJ0fORPGHd/Frz7NpPpkl/7/nL+Z4NE6IbUd6XQihtGIlG/WLBierzWeB7brYFXfb5e56tbkB6ZOyRrekGSdplfR+oA3DEQdFYKXxRJqsbEbYG4uSHKMj6+NW6orwrPiAMxHB7JDDTDZovMbNXWdJ1pC6Pn98XSxvv835EF7dmffpX4xxlLyhzLanvwK9bxzsVZR+eiN5Lxs3ZIe99pOpialiqsVQ/QdUKl2HejZ4NvYIGcbGpP0kRkOVlfro0PbebEkoTe/b8sn0UjW9UyfCsrgPdBcNrN/PAvHI====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>MACHINE_ENV_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/MACHINE_ENV_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testMachEnv.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.868269</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testMachEnv.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNkkFLxDAQhe/9FXNU0GyStklTUFg8eZFFFIVSJE2zNNA2NUnX9d+b6kl3z9Ichgnz3puPEF5CRTgjgjORF4iIPOOshkp17hrTtCgJFlSQtMQ1LGdW05uyY9DHgFQZ5QSe714BXraPDxDbHWx393DQzhs7gvFgRmWHSQbT9LoEp99n43QLtzdAEGFXIFWYZb9cMoThoreyjeO9swNsZu82vWlYttS4GXmL8GXCfzNTUXBMV86c/WGmlLH0lBmvmVkUDK+dOT/5zzk9w0xWzPz9zsV/MSOUVE9dFE3SBbB7CJ2GoH3s5zDNAT6kj5bBHqLDxyQNJoA+Kq1b/yPunPad7dvFTTDNoPmMAahOvgDlYUjH====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>BROADCAST_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/BROADCAST_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testBroadcast.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.884434</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testBroadcast.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNksFKxDAQhu99ijkqaDZJm6QpKCyevMgiikIp0qZZGmibmqTr+vameNKeFzqHYULmn/n4GVZASQQnUnDJJMJCMJpWUKrO3WKa5gXBkkpOClzBErOaPpQdgz4HpAoiGYHXh3eAt/3zE8TyAPvDI5y088aOYDyYUdlhqoNpel2A05+zcbqF+zsgiPAbqFWY6355ZAjDVW/rNn4fnR1gN3u3603DsyXHzchbhK8T9peZ5BmV2caZ+drnVK6Z6YaZo8+pwBtnTv/5nJNM8BUzkxtmXu6Zru/5QswIJeVLF5um2gWwRwidhqB9rOcwzQG+ah8lgz1FhY+TNJgA+qy0bv1vc+e072zfLmqCaQbNdxyAquQHJKVI5w==</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>LOGGING_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/LOGGING_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testLogging.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.869279</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testLogging.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU9uK2zAQfd+vmMcWUq28dpy1IIU0vRDaJGbbpYUQgmxP1iK25ErjZNuvr+QUetmF0rc1yIykmXOOdDSxgE00SaNskmbjjGXj2Mdb2JS1fcGv4msR8SzmPBN8C+Hry25XGk14T6wUUTaO4Hb+BeDz7GYFPsxhli/giNYpo0E5ULo0bSdJFQ0KsPi1VxYreDmFiEXpCGRJvWzCJGEcnjVGVn57b00Ll72zl40q0iT8PTNzhvHnF/FvmlPOeDLJksnT1/zeHA7GCbHuUC9zIZRWpGSjvuOgZLF6J2C9zHf5zXq+e7VYvQbUR2WNblETHKVV0usBbQgcUkAEWGi4Q41WNiPYGwsFOoIOrY9bqUuEk6IazowQxA45RGgDxp90U9dZlBVIXZ03Pszmbz5OqQ6r7sz39l8cMYseQSbb4y+A3h8cyKMoffdI8l42bsgOY+mdqZCwJKzEUP2TqFC6CvVk4GTsAWSwjVB7J0ZDlZX64KDtvdgCoTC9P5ZPxvuy6Z06Iszz28Du2MCV/N0I13H6sBEi/pQeVfKwEcbJ/2lmjF1sPtVeXyctgdkD1TiYA6anric4+Zu12JqjV+NU8Nu7528RsXLnZP9AXG2aKlRH/CqB4psHYNuLHyJcVxA=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>ERROR_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/ERROR_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testError.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>3</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.817147</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testError.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU01r3DAQve9fyGWglwRafflj14YWQumhPZTQNqSwLEWWx2s1tuVK43Tz7ystNGRJji3tHAaJeXrvDTNSNWzlupTVuqxKwTYqk1W+g63p/Suhsk0tRZWJsqzFDlIsZv5m3ER4IGZqWRUSrt9+Bbi5/PQR4vEKLq/ewx36YN0ENoCdjBtnTbYZsAaPPxbrsYU3r0EyWb4EbWjRQ7rkTMD54HQby513I/AleD7YpsxTjsosOCYuVurUc6UqJcr/3HPwy1TDB9dAIJxBN84TtjXcaEt22sMyAzmoFASMVtsAnfPw/Tc8ljo72dCz1Pxn0uYWyGuDcD66QNGiwYnA6GGIQB/ook7AFwLOtlk+ioN4iFysi7Y424oRNKWyGvlgvOF775aZYxZGrg27teM9dyPuNTetDj3fTwsXkhMGOqZ33jvP8ICJ6igmnxPbZBr/hph6LCaLGKrosN3kp2In0zBpFuUDRfac37LT7Z/2mz35Y0pmT/d1/S/2lTG22n7pI8msPYHrgHqE1AO4heaF4KcOkXJ0d/FJiEoIlgAPBjFu6RHcewy9G9r0WgqVQ3MfCdhu9Qs2plKG====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>DECOMP_NTASK1_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/DECOMP_NTASK1_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testDecompNTask1.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.714863</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testDecompNTask1.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNkd2K2zAQhe/7FOeyhdQrNY5TC1JI0x9Cm8RsWVpYliDLk42ILbmSnF369JWcQllY6G0FEiNp5nxnGCZwy+cFL+dFWfBsls/y+fQOt+roXrM307eCs3LKcybYHdIaVL9X1gR6DJkSvJxx3Kx+AN+X11vEsMKyWuNMzmtroD20UbbrZdB1SwKOfg7aUYN3C/CMFxNIFQbZpkueMbxsrWzi98HZDleDd1etros8nZGceZuxVy/YU88FK3nB/n/PX+zpZL0Qu57MphJCGx20bPUvGp2st58FdptqX13vVvv36+0HkDlrZ01HJuAsnZbRD4wN8BSSIrA2uCdDTrYTHKxDTT6gJxfjThpFeNDhiAsRyeyYEwK5pPEUt/C9I9lAmuby8XW5+vhtEY7p1V94n/7FmGb8GeXgBvorMMTGEaKKNvfPJB9k68fstDdxMg0FUoEaMVb/AdXaNKk+WDxYd4JMYwtk4iQmY5WT5uTRDdFsTajtENuKyfSo2sHrM2FV3SS6z0bWb0Ut8ZE=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>DECOMP_NTASK8_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/DECOMP_NTASK8_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testDecompNTask8.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.04886</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testDecompNTask8.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfM+v2McWUp2V5JJYkEKafhDaJObao4UQgmxvziK25Eqr5K6/vpJTKEcP2r6dwWZlzc6MNBIXsOWTMU8n43Q8YMNQ8ekOtkVlXyWD4VTwJB3yCRfJDuLji3ZfGE14T6wQPL3mcLv4BvB1frOGUGYwz5ZwQuuU0aAcKF2YppWk8hoFWPzulcUSXs+AMz7ugyzIyzoORiyBF7WRZZg+WNPAlXf2qlb5eBS/QZk5w5KXPf7Y82iUDqfp8/f80RyPxgmxaVGvMiGUVqRkrX5g52S5/iBgs8r22c1msX+zXL8F1CdljW5QE5ykVTL4AW0IHFJkBFhquEONVtZ9OBgLOTqCFm2oG6kLhLOiCi6KEM12GCK0keOx3My1FmUJUpeXiU/zxbvPM6riX3fRe/83jSHjTzCT9fibwIeFAwUWpe+eAB9k7Tp0fFchmRIJC8JSdN2/hHKly9hPBs7GHkHG2Ah1SKLfdVmpjw4aH8zmCLnxYVkBjPdF7Z06ISyy26juWKeV/NtFSJ7ToUr+uAjXyeD/PDPGetsvVfDXSktgDkAVduGA8dR6gnPYWYuNOQU3TsW8Q3phFxFLdwGHA+IqU5exmyeDEeQPgYDtej8BzfNW7A==</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>HALO_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/HALO_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHalo.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.39389</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHalo.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU11r2zAUfc+vuI8bZKplp2ksyCDLPghbEtOtbBBCkO2bWsSWPOk6affrJzmD0lLY9laDjD7OPedIR4oFbPjVmKdX43ScsBGPJ2m8hU1R2TdRnEwEj9IkTiIRbSF8XdHuCqMJ74gVgqeXHG7mPwC+z65X4LsZzLIFHNE6ZTQoB0oXpmklqbxGARZ/dspiCW+nwBkfD0EW1Mk6DEYsgle1kaVf3lvTwEXn7EWt8vEo/L0yc4ZFrwfxE8/pZJIkL9/zZ3M4GCfEukW9zIRQWpGStfqFvZPF6pOA9TLbZdfr+e7dYvUeUB+VNbpBTXCUVknvB7QhcEiBEWCh4RY1WlkPYW8s5OgIWrS+30hdIJwUVXBWhGC2xxChDRyP5aautShLkLo8L3yZzT98nVIVZt1Z7+PfNBLGn2Em2+EDQec3DuRZlL59BryXtevRoS19MiUSFoSl6Kv/COVKl6GeDJyMPYAMsRFqn8Swr7JSHxw0nTebI+Sm89vyYLwr6s6pI8I8uwnqjvVayb89BP6SLtVTz+EhXP6fZ8bYYPOt8v5aaQnMHqjCPhwwHbUdwcmfrMXGHL0bp0LePj1/ioilO4P9BXGVqctQzaN4BPm9J2DbwW/HBFb6====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>DIMENSION_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/DIMENSION_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testDimension.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.04078</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testDimension.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfL9fsY8tpDorcZyzIIU0/SC0Scy1RwshBNnenEVsyZXWyV1/fSWnUI6Gto9nsJGs2ZmRZjUWsOGThKeTJE1iNkmTG55uYVNU9lU0HN0IHqWjYcpFtIXwdEW7K4wmfCBWCJ6OOdzNvwF8nd2uwA8zmGULOKJ1ymhQDpQuTNNKUnmNAix+75TFEl5PgTOeDEAW1Mk6TGIWwYvayNIv761p4Lpz9rpWeRKHr1dmzrDo5dX4qec0GvJx/Pw9fzSHg3FCrFvUy0wIpRUpWasf2DtZrD4IWC+zXXa7nu/eLFZvAfVRWaMb1ARHaZX0fkAbAocUGAEWGu5Ro5X1APbGQo6OoEXrx43UBcJJUQVnRQhmewwR2sDxVG7qWouyBKnL88Kn2fzd5ylV4a87673/l8aI8QvMZDv8TdD5jQN5FqXvL4D3snY9OrxLn0yJhAVhKfrqX0K50mWoJwMnYw8gQ2yE2icx6Kus1AcHTefN5gi56fy2PBgfirpz6ogwz+6CumO9VvznRRheaKroOTVV/H8X4W+eGWNXmy+V99dKS2D2QBX24YDpqO0ITv5kLTbm6N04FfL26flTRCzdGewbxFWmLkM1j4Yx5I+egG2vfgJitVct====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>HORZMESH_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/HORZMESH_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHorzMesh.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.54287</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHorzMesh.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU9uK2zAQfc9XzGMLqdZeO3EsSCFNL4Q2idl2aSGEINuTtYgtudI42e3XV3IKZUloX9cgo8vMOUc6MxGHTZiMwzQZp+MRm8SjZJJsYVNU5k1wG014GKRRFCc82IL/uqLdFVoRPhIreJiOQrif/wD4PrtbgZtmMMsWcERjpVYgLUhV6KYVJPMaORj82UmDJbydQsjC8RBEQZ2o/SJmAbyqtSjd8d7oBm46a25qmY9j/3fMzGoWvB5EzzWnozhKJi9f82d9OGjL+bpFtcw4l0qSFLX8hb2SxeoTh/Uy22V36/nu3WL1HlAdpdGqQUVwFEYKpweUJrBIHhFgoeABFRpRD2GvDeRoCVo0bt4IVSCcJFVwZgQvto8hQuMxntNNbWtQlCBUeT74Mpt/+Dqlyu/aM9/H/3FELLyCTKbDvwCduziQQ5Hq4UrwXtS2j/Zj6ZwpkbAgLHmf/Ycol6r0+aThpM0BhLeNUDknhn2WEepgoemc2Bwh1527lgvGx6LurDwizLN7z25ZzxVcNMIkDC+LKn5JRRVcNkJ6pRH+pZkxNth8q5y+VhgCvQeqsDcHdEdtR3ByL2uw0Uenxkrvt3PPvSJiac/BrkBspevSZ4fBbQz5kwNg28FvdnFXMQ==</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>HORZOPERATORS_PLANE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/HORZOPERATORS_PLANE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHorzOperatorsPlane.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.36418</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHorzOperatorsPlane.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfL9fsY8tpDorcezEkEKafhDaJObao4UQgmxvziK25Eqr5NpfX8kplOsdlL6dwUayZmdGmtUwgy1PEz5Nk2mSstGEjyeTHWzL2ryKhqNJxqPpKI7iLNpBeFzZ7UutCO+JlRmfjjncLr4BfJ3frMEPc5jnSzihsVIrkBakKnXbCZJFgxkY/O6kwQpez4AzngxAlOREEyYxi+BFo0Xllw9Gt3DtrLluZJHE4euVmdUsenk1fOg5Tvkkjp6/54/6eNQ2yzYdqlWeZVJJkqKRP7F3slx/yGCzyvf5zWaxf7NcvwVUJ2m0alERnISRwvsBpQksUmAEWCq4Q4VGNAM4aAMFWoIOjR+3QpUIZ0k1XBQhmO0xRGgCx0O5me0MigqEqi4Ln+aLd59nVIe/9qL3/l8aI8afYCbj8A+B8xsH8ixS3T0BPojG9ujwrnwyFRKWhFXWV/8WKqSqQj1pOGtzBBFiI1Q+iUFfZYQ6WmidN1sgFNr5bXkw3peNs/KEsMhvg7plvRb/6yIkPE6Hj5tq9Jyaij+6COl0/H+eGWNX2y+199cJQ6APQDX24YB21DmCsz9Zg60+eTdWhrx9ev4UESt7AfsGsbVuqlDNo2EMxQ9PwHZXvwDziFcD====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>HORZOPERATORS_SPHERE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/HORZOPERATORS_SPHERE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHorzOperatorsSphere.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.39764</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testHorzOperatorsSphere.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU11r2zAUfe+vuI8bZKqVOE4syCDLPghbEtOtbBBCkO2bWsSWPOk6affrJzmDUVbY9laDjD7OPedIRxoL2PJJwtNJkiZTNplEUcp3sC0q+yoajqaCR+koTiYi2kH4uqLdF0YT3hMrBE/HHG4X3wC+zm/W4LsZzLMlnNA6ZTQoB0oXpmklqbxGARa/d8piCa9nwBlPBiAL6mQdBjGL4EVtZOmXD9Y0cN05e12rPInD3yszZ1j08mr82PM04cNo9Pw9fzTHo3FCbFrUq0wIpRUpWasf2DtZrj8I2KyyfXazWezfLNdvAfVJWaMb1AQnaZX0fkAbAocUGAGWGu5Qo5X1AA7GQo6OoEXr+43UBcJZUQUXRQhmewwR2sDxWG7mWouyBKnLy8Kn+eLd5xlVYdZd9N7/TWPE+BPMZDv8TdD5jQN5FqXvngAfZO16dGgrn0yJhAVhKfrqX0K50mWoJwNnY48gQ2yE2icx6Kus1EcHTefN5gi56fy2PBjvi7pz6oSwyG6DumO9VvxvDyF5Tpcq/vMhpPH/eWaMXW2/VN5fKy2BOQBV2IcDpqO2Izj7k7XYmJN341TI26fnTxGxdBewvyCuMnUZqnk0jCF/8ARsd/UTZkxXPQ==</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>AUXVARS_PLANE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/AUXVARS_PLANE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testAuxiliaryVarsPlane.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.40974</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testAuxiliaryVarsPlane.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfM+v2McWUp2d2HEjSCFNPwhtEnPt0UIIQbY3ZxFbcqVVctdfX8kplKOB0rcz2EjW7MxIs0o4bONsEk+zyTSLWJyNszTdwbaszatoNH7N42g6TkcJj3YQHld2+1IrwgdiJY+naQx3i+8A3+a3a/DDHOb5Ek5orNQKpAWpSt12gmTRIAeDP5w0WMGbGcQsngxBlOREEyYJi+BFo0Xllw9Gt3DjrLlpZDFJwtcrM6tZ9HKQPPU8yqJoGj1/z5/08agt55sO1SrnXCpJUjTyJ/ZOluuPHDarfJ/fbhb7t8v1O0B1kkarFhXBSRgpvB9QmsAiBUaApYJ7VGhEM4SDNlCgJejQ+HErVIlwllTDRRGC2R5DhCZwPJWb2c6gqECo6rLweb54/2VGdfhrL3of/qUxZvEVZjIO/xA4v3EgzyLV/RXwQTS2R4d35ZOpkLAkrHhf/VuokKoK9aThrM0RRIiNUPkkhn2VEepooXXebIFQaOe35cH4UDbOyhPCIr8L6pb1WumVi5D83VTpc2qq9MpFGP+fZ8bYYPu19v46YQj0AajGPhzQjjpHcPYna7DVJ+/GypC3T8+fImJlL2DfILbWTRWq42iUQPHoCdhu8Avgu1cC====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>AUXVARS_SPHERE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/AUXVARS_SPHERE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testAuxiliaryVarsSphere.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.38201</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testAuxiliaryVarsSphere.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzVU9uK2zAUfM9XnMcWUq20iZ3YkEKaXghtErPt0kIIQbZP1iK25ErHyW6/vpJTKEsX2r61Bhld5syMNJJIYSsmsUgmcTIRLIo4H013sC0q+4Jfj6ap4MkomiQp30H4uqLdF0YT3hMrUpFEAm4XXwA+z2/W4LsZzLMlnNA6ZTQoB0oXpmklqbzGFCx+7ZTFEl7OQDARD0EW1Mk6DMaMw7PayNIvH6xp4Kpz9qpWeTwOf6/MnGH8+UA89hxHCU/+A8/vzfFoXJpuWtSrLE2VVqRkrb5h72S5fpfCZpXts5vNYv9quX4NqE/KGt2gJjhJq6T3A9oQOKTACLDUcIcarayHcDAWcnQELVrfb6QuEM6KKrgoQjDbY4jQBo7HcjPXWpQlSF1eFj7MF28+zqgKs+6i9/Z3GiMmnmAm2+FPgs5vHMizKH33BPgga9ejQ1v5ZEokLAjLtK/+IZQrXYZ6MnA29ggyxEaofRLDvspKfXTQdN5sjpCbzm/Lg/G+qDunTgiL7DaoO9Zr8T97CNN/6VLxXx6CiP/SM2NssP1UeX+ttATmAFRhHw6YjtqO4OxP1mJjTt6NUyFvn54/RcTSXcD+grjK1GWoFvx6DPmDJ2C7wXcdzlcZ====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>AUXSTATE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/AUXSTATE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testAuxiliaryState.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.54403</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testAuxiliaryState.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU11r2zAUfc+vuI8bZKo/Eqc2ZJBlH4QtielWNgglyPZNLWJLnnTltPv1k5xBOyhbH2uwJUvnnnOkI0UZ7MJZEqazJJ1FLI3j6DK4gV1Z6zdBFF9mYZDGiWvdoH9s2e1LJQnviJVZmE5DuF7+APi+uNqA6+awyFfQozZCSRAGhCxV23ESRYMZaPxphcYK3s4hZGEyBl6S5Y3/mbAAXjWKV276oFULF9boi0YUycR/nTIzigWvR9FjzzEL4nA6jV++58/qeFQmy7YdynWeZUIKErwRv3Bwstp8ymC7zvf51Xa5f7favAeUvdBKtigJeq4Fd35AKgKD5BkBVhJuUaLmzRgOSkOBhqBD7fotlyXCSVANZ0XwZgcMEWrP8bfc3HQaeQVcVueJL4vlh69zqv2oOet9/J9GzMInmElbfCCwbuFAjkXI2yfAB96YAe3ftUumQsKSsMqG6j9ChZCVrycFJ6WPwH1shNIlMR6qNJdHA611ZguEQlm3LAfGu7KxRvQIy/zaqxs2aMXPuwjpSzpU8fMuwr88M8ZGu2+189dxTaAOQDUO4YCy1FmCk9tZja3qnRsjfN4uPbeLiJU5g90BMbVqKl8dBtEEintHwG5GvwHqcFcE====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>IO_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/IO_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testIO.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>6.80895</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testIO.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfM+v2McWUp2dOB8WpJCmH4Q2ibn2aCGEINubs4gtudIqueuvr+QUynGB0rcz2EjW7MxIsxpx2MaTcZxOxukkYUkaJel0B9uiMm+iwXDK4ygdjtOURzsIjyvafaEV4QOxgsfpKIa7xQ+A7/PbNfhhBvNsCSc0VmoF0oJUhW5aQTKvkYPBn04aLOHtDGIWj/sgCnKiDpOERfCq1qL0ywejG7hx1tzUMh8n4euVmdUset0bPfU8mg6TYfryPX/Wx6O2nG9aVKuMc6kkSVHLX9g5Wa4/cdissn12u1ns3y3X7wHVSRqtGlQEJ2Gk8H5AaQKLFBgBlgruUaERdR8O2kCOlqBF48eNUAXCWVIFF0UIZjsMEZrA8VRuZluDogShysvCl/niw9cZVeGvveh9/JfGkMVXmMk4/Evg/MaBPItU91fAB1HbDh3elU+mRMKCsORd9R+hXKoy1JOGszZHECE2QuWT6HdVRqijhcZ5szlCrp3flgfjQ1E7K08Ii+wuqFvWaSXPL8LgSlNNX1JTJc8uwmiQ/J9nxlhv+63y/lphCPQBqMIuHNCOWkdw9idrsNEn78bKkLdPz58iYmkvYN8gttJ1GarjaJBA/ugJ2K73G+PdV2Q=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>CONFIG_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/CONFIG_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testConfig.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.855781</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testConfig.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzN0EtLxDAQAOD7/oo5Kmg2abpJWlBYPHmRRRSFUiRNszTQNjWPdf33pnrS3qU5hAmZx8eQEirCGSk4KwRBFHOOaQ2V6tw1zqgoCS4oZ7TENcwnqulN2THoc0CqJMWOwPPdK8DL/vEBUniA/eEeTtp5Y0cwHsyo7DDJYJpel+D0ezROt3B7AwQRdgVShSj7+ZEjDBe9lW36Pjo7wDZ6t+1Nw/L5TpORtwhfbsgfs0hAtnIzX+wZM7E0F2s2C1rQfOVm9tucCcH5bmkWKzZ/7/nfzAhtqqcuJU3SBbBHCJ2GoH2KY5higA/pU8lgT6nCp04aTAB9Vlq3/ie5c9p3tm/naoKzHJrP1ADVmy/7V0jr====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>FIELD_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/FIELD_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testField.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.06528</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testField.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU9uK2zAUfM9XnMcWUq3l2LkYtpCmF0KbxGy7tBBCkO2TtYgtudJRsu3XV3IKZSHQ9m0NMrrMmRlppDSDLZ+M+Wwynk1jxtPRNI53sC1r8yqKR9OMR7PRlE+yaAfhc2W3L7UifCRWZnyWcrhffAP4Or9bg+/mMM+XcEJjpVYgLUhV6rYTJIsGMzD43UmDFby+Bc74eAiiJCeaMEhYBC8aLSq/fDC6hRtnzU0ji3ES/l6ZWc2il4P0qec4maQ8ff6eP+rjUdss23SoVnmWSSVJikb+xN7Jcv0hg80q3+d3m8X+zXL9FlCdpNGqRUVwEkYK7weUJrBIgRFgqeABFRrRDOGgDRRoCTo0vt8KVSKcJdVwUYRgtscQoQkcT+VubWdQVCBUdVn4NF+8+3xLdZi1F733f9MYMX6FmYzDPwTObxzIs0j1cAV8EI3t0aGtfDIVEpaEVdZX/xYqpKpCPWk4a3MEEWIjVD6JYV9lhDpaaJ03WyAU2vlteTA+lo2z8oSwyO+DumW9VvJvD2H8nC5VcuUhjP7PM2NssP1Se3+dMAT6AFRjHw5oR50jOPuTNdjqk3djZcjbp+dPEbGyF7C/ILbWTRWqeRQnUPzwBGw3+AUu+Fcf====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>IOSTREAM_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/IOSTREAM_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testIOStream.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>20.8789</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testIOStream.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfL9fsY8tpDorTpzYkEKafhDaJObao4UQgmxvziK25Eqr5NpfX8kplOsdlL6dwUayZmdGmlWUwZZPEp5OknQasyFPJtPRDrZlbV5Fw3ia8SiNp5Moi3YQHld2+1IrwntiZcbTMYfbxTeAr/ObNfhhDvN8CSc0VmoF0oJUpW47QbJoMAOD3500WMHrGXDGkwGIkpxowmTEInjRaFH55YPRLVw7a64bWSSj8PXKzGoWvbyKHnqOOZ+Oxs/f80d9PGqbZZsO1SrPMqkkSdHIn9g7Wa4/ZLBZ5fv8ZrPYv1mu3wKqkzRatagITsJI4f2A0gQWKTACLBXcoUIjmgEctIECLUGHxo9boUqEs6QaLooQzPYYIjSB46HczHYGRQVCVZeFT/PFu88zqsNfe9F7/y+NmPEnmMk4/EPg/MaBPItUd0+AD6KxPTq8K59MhYQlYZX11b+FCqmqUE8aztocQYTYCJVPYtBXGaGOFlrnzRYIhXZ+Wx6M92XjrDwhLPLboG5Zr5X8fRHGSRQ9bqrkOTVV8ugipGn8f54ZY1fbL7X31wlDoA9ANfbhgHbUOYKzP1mDrT55N1aGvH16/hQRK3sB+waxtW6qUM2j4QiKH56A7a5+Ad3jVwY=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TEND_PLANE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TEND_PLANE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n 8" "--" "./testTendencyTermsPlane.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.38706</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n 8" "--" "./testTendencyTermsPlane.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfM+v2McWUp2VpPZFcIU0/SC0Scy1RwvhCLK9OYvYkiutkmt/fSWnUI6E9vVsLGRpd2ak2U0FbHiW8mmWJcmEJdeTbJTcw6as7atkNL4WPJmOwyvCYnx82W1LowkfiZWCT19zuJt/B/g2u11BmOYwyxdwQOuU0aAcKF2atpOkigYFWPzhlcUK3twAZzwdgizJyyb+BHZ40RhZhe2dNS1ceWevGlWkkzgGZuYMS14O0qea+TQdJ+Pnr/mT2e+NE2LdoV7mQiitSMlG/cJeyWL1UcB6mW/z2/V8+3axegeoD8oa3aImOEirZNAD2hA4pIgIsNDwgBqtbIawMxYKdAQd2jBvpS4RjopqODFCFNvHEKGNGE/pblxnUVYgdXXa+Dybv/9yQ3VcdSe+D//jGDN+AZmsx78APhwcKKAo/XAheCcb10fHbxmcqZCwJKxEn/2HqFC6ivlk4GjsHmS0jVAHJ4Z9lpV676D1QWyBUBgfjhWC8bFsvFMHhHl+F9kd67myC43Az4pqkjynosrOGmE0PW+Ef2pmjA02X+ugr5OWwOyAauzNAeOp8wTHcLMWW3MIapyKfgf3wi0iVu4UHArE1aapYjZPRhMofgYAdj/4DeQtVwM=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TEND_PLANE_SINGLE_PRECISION_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TEND_PLANE_SINGLE_PRECISION_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n 8" "--" "./testTendencyTermsPlaneSinglePrecision.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.39641</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n 8" "--" "./testTendencyTermsPlaneSinglePrecision.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfL9fsY8tpDopH/bZkEKafhDaJObao4UQgmxvziK25Err5K6/vpJTKNcGSt/OICNLszMjzVqksBFxJJI45nzCJnwUJZMtbIrKvuLD0U0qeDLmfJjyLYSnK9pdYTThA7EiFclEwN38G8DX2e0K/DSDWbaAI1qnjAblQOnCNK0kldeYgsXvnbJYwuspCCaiAciCOlmHjzHj8KI2svTbe2sauO6cva5VHo3D2yszZxh/eSX+8HyTxAl//p4/msPBuDRdt6iXWZoqrUjJWv3A3sli9SGF9TLbZbfr+e7NYvUWUB+VNbpBTXCUVknvB7QhcEiBEWCh4R41WlkPYG8s5OgIWrR+3khdIJwUVXBWhGC2xxChDRxP5aautShLkLo8b3yazd99nlIVVt1Z7/2/NEZMXGAm2+Fvgs4fHMizKH1/AbyXtevRYSx9MiUSFoRl2lf/EsqVLkM9GTgZewAZYiPUPolBX2WlPjhoOm82R8hN54/lwfhQ1J1TR4R5dhfUHeu1oqdNNY6iKL7QVPFzaqro7x/hfz0zxq42Xyrvr5WWwOyBKuzDAdNR2xGc/M1abMzRu3Eq5O3T87eIWLoz2DeIq0xdhmrBh2PIHz0B2179BEseVs4=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TEND_SPHERE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TEND_SPHERE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n 8" "--" "./testTendencyTermsSphere.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.42066</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n 8" "--" "./testTendencyTermsSphere.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfM+v2McWUp2cxB8xpJCmH4Q2ibn2aCGEINubs4gtudI6ueuvr+QUyrWB0rcz2EjW7MxIs4pT2AZxFEzjmPOIJUkYjcMdbIvKvOKjcZIGfDrhUZTyHfinK9p9oRXhA7EiDaZhAHeLbwBf57drcMMM5tkSTmis1AqkBakK3bSCZF5jCga/d9JgCa9nELAgGoIoqBO1n0wYhxe1FqVbPhjdwE1nzU0t82jiv06ZWc34y0H81PM04SEfPX/PH/XxqG2ablpUqyxNpZIkRS1/YO9kuf6QwmaV7bPbzWL/Zrl+C6hO0mjVoCI4CSOF8wNKE1gkzwiwVHCPCo2oh3DQBnK0BC0aN26EKhDOkiq4KII322OI0HiOp3Iz2xoUJQhVXhY+zRfvPs+o8n/tRe/9vzTGLLjCTKbD3wSd2ziQY5Hq/gr4IGrbo/27csmUSFgQlmlf/Usol6r09aThrM0RhI+NULkkhn2VEepooemc2Rwh153blgPjQ1F3Vp4QFtmdV7es14r+uAjxNEyuNFX4nJoq+usiTGL+f54ZY4Ptl8r5a4Uh0AegCvtwQHfUdgRnd7IGG31ybqz0ebv03CkilvYCdg1iK12Xvjrgownkj46A7QY/ASS0Vx8=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TENDENCIES_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TENDENCIES_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testTendencies.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.54728</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testTendencies.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU11r2zAUfc+vuI8bZKqVOE4iyCDLPghbEtOtbBBCkO2bWsSWPOk6affrJzmD0lLY9laDjD7OPedIR4oFbPk44dPxOIombBglUTLawTYv7ZtoMJwIHk1jPuAi2kH42rzZ50YT3hHLBZ+OONwsfgB8n1+vwXdTmKdLOKF1ymhQDpTOTd1IUlmFAiz+bJXFAt7OgDOe9EHm1MoqDGIWwavKyMIvH6yp4ap19qpSWRKHv1dmzrDodS9+4nnKp4Pk5Xv+bI5H44TYNKhXqRBKK1KyUr+wc7JcfxKwWaX79Hqz2L9brt8D6pOyRteoCU7SKun9gDYEDikwAiw13KJGK6s+HIyFDB1Bg9b3a6lzhLOiEi6KEMx2GCK0geOx3Mw1FmUBUheXhS/zxYevMyrDrLvoffybxpDxZ5jJtvhA0PqNA3kWpW+fAR9k5Tp0aCufTIGEOWEhuuo/QpnSRagnA2djjyBDbITaJ9HvqqzURwd1681mCJlp/bY8GO/yqnXqhLBIb4K6Y53W6N8ewuAlXaqnnsNDmPyfZ8ZYb/ut9P4aaQnMAajELhwwLTUtwdmfrMXanLwbp0LePj1/ioiFu4D9BXGlqYpQzaNBDNm9J2C73m9ps1bW====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>STATE_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/STATE_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testState.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.69047</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testState.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzVU12L2zAQfL9fsY8tpDo7cZxYkEKafhDaJObao4UQgmxvziK25Eqr5NpfX8kplOsdlL61BhvJmp0ZaVYJh208SeNsMomijE2T8TDNdrAta/MiGo6mPI6yJJ5kPNpBeFzZ7UutCO+JlTzOxjHcLr4AfJ7frMEPc5jnSzihsVIrkBakKnXbCZJFgxwMfnXSYAUvZxCzOB2AKMmJJkwSFsGzRovKLx+MbuHaWXPdyCJNwtcrM6tZ9Pwqeeg5S4Zp9B94fq+PR20533SoVjnnUkmSopHfsXeyXL/jsFnl+/xms9i/Wq5fA6qTNFq1qAhOwkjh/YDSBBYpMAIsFdyhQiOaARy0gQItQYfGj1uhSoSzpBouihDM9hgiNIHjodzMdgZFBUJVl4UP88WbjzOqw1970Xv7J40Ri59gJuPwF4HzGwfyLFLdPQE+iMb26PCufDIVEpaEFe+rfwoVUlWhnjSctTmCCLERKp/EoK8yQh0ttM6bLRAK7fy2PBjvy8ZZeUJY5LdB3bJea/zbRRgN03H6qKmm0b/UVONHF2GSTP/OM2Psavup9v46YQj0AajGPhzQjjpHcPYna7DVJ+/GypC3T8+fImJlL2DfILbWTRWq42iYQPHNE7Dd1Q8oglcW====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TIMEMGR_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TIMEMGR_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testTimeMgr.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.462306</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testTimeMgr.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNjk1qwzAUhPc5xSxTaOX3ZPlHghRMV90UUygJBBMcRSUC23Jlu/T4tZe9QWcxzDCL+cjgzEXOuiiIWais1KVucLb3+EQyLQ2TVjJNDTXYtNjxYsMwu59ZWMM6Y3y8nIBj9f6GNdao6ld8uzj5MMBP8IMN/djO/to5g+i+Fh/dDc8HsOD8Ea2dl7bbihKEfRfa2zp/xtAjWaaYdP6aq83XZzEFQQ87+sucSSUl/XPmX3fUaFM=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>REDUCTIONS_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/REDUCTIONS_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "2" "--" "./testReductions.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.599223</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "2" "--" "./testReductions.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzVU12LEzEUfe+vuI8KNTuZdlsnUKHWD4q2HVYXhVJKZuZ2J3QmGZObdvXXm0wFcVlQ33QgQz7OPeckJ0kEbPl0wrPpNOGcZekk43wH27K2z5J09FzwJBunk1QkO4ifL7t9aTThPbFS8Oyaw+3iM8Cn+c0aQjeHeb6EE1qnjAblQOnStJ0kVTQowOIXryxW8GIGnPHJEGRJXjZxMGYJPGmMrMLywZoWrryzV40qJuP4D8rMGZY8HSQPPGfp+Po/8PzOHI/GCbHpUK9yIZRWpGSjvmHvZLl+K2Czyvf5zWaxf7lcvwLUJ2WNblETnKRVMvgBbQgcUmQEWGq4Q41WNkM4GAsFOoIObei3UpcIZ0U1XBQhmu0xRGgjx69yM9dZlBVIXV0W3s8Xrz/MqI6z7qL35ncaI8YfYSbr8SeBDxsHCixK3z0CPsjG9ejYViGZCglLwkr01T+ECqWrWE8GzsYeQcbYCHVIYthXWamPDlofzBYIhfFhWwGM92XjnTohLPLbqO5Yr8X/7CGM/qVL9dBzeAg8+zvPjLHB9mMd/HXSEpgDUI19OGA8dZ7gHE7WYmtOwY1TMe+QXjhFxMpdwOGCuNo0VazmSTqG4msgYLvBdzMJVrw=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TIMESTEPPER_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TIMESTEPPER_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "2" "--" "./testTimeStepper.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.34772</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "2" "--" "./testTimeStepper.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNk1uL2zAQhd/zK+axhVRreZ2LBSmk6YXQJjHbLi2EEGR7shaxJVcaJ7v99ZWcQumy0PZtDTayNXPOJx05ErDlkzFPJ5OIx2zEkzRJdrAtKvsqiq+ngkdpEqdjEe0gXF3R7gujCe+JFYKnIw63i28AX+c3a/DDDObZEk5onTIalAOlC9O0klReowCL3ztlsYTXM+CMj4cgC+pkHV4SFsGL2sjSTx+saeCqc/aqVvk4CU/vzJxh0ctB9Ih5Gifx6PkzfzTHo3FCbFrUq0wIpRUpWasf2JMs1x8EbFbZPrvZLPZvluu3gPqkrNENaoKTtEp6HtCGwCEFRYClhjvUaGU9hIOxkKMjaNH6cSN1gXBWVMHFEQJsX0OENmj8aTdzrUVZgtTlZeLTfPHu84yq8NVd/N7/zeOa8SeUyXb4W6DzCwfyKkrfPVF8kLXrq8O98smUSFgQlqLv/mWUK12GfjJwNvYIMsRGqH0Sw77LSn100HQeNkfITeeX5Yvxvqg7p04Ii+w2uDvWe/F/+xEmz+lQPWaexqM4+j9mxthg+6XyfK20BOYAVGEfDpiO2o7g7HfWYmNOnsapkLdPz+8iYukuxf6AuMrUZejmUZxA/uAF2G7wE2OaVso=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>KOKKOS_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/KOKKOS_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testKokkos.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.374522</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testKokkos.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJytk0uL2zAUhff5FWeZwqDKr2RsmMUkbYfQ5sG0pYtSBjm6GYvYkpHkpNNfX9npMDQd6CYLg3x1zvn0urzAR7PfG1cU65b0clMUSiuvRK1+Eb7d3q8Wq7sC6+XmYXO/nj/MFqt3IH1Q1uiGtMdBWCXKmqCNhyM/4gWAhcYjabKivsLOWJTkPFqyYdwIvSUcla9wIiJlHIPGe7J9xt+4G9daEhJCy9PEp9v5+883vuqr7sT78D9GwqJXkr3t6CWgCxuHDylKP74i3onaDer+W24WkORp60kWg/sPqFRa9n5vcDR2D+GgtCctSV4NLiv03qHpwmJLQmm6sK0gpp/bunPqQJhvvvZ0x55ZwGqMlOcTvMFyjIjHaRhpSy0Jj77Aw39rTbiGZowkYVmepVjOQtWrhsbgjPN4mvMMLtTKcJJHJX0VrDFPWB7jbvY2zFwOlmUTHufntAlPWcwvT7uO0zibntNSPmXZdXppWhRUeXQOS3jGokl0cVgyybN/bi1OM5Zc5hwZY6PvXyrl0ArrYXbwFQ1NANP5tvM4hhdsqTEHknCq76vQJeG1Ekl3EodGdJWpZe8eyOVTCGA/Rr8BZVc6aw==</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>DRIVER_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/DRIVER_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testDriver.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>2.47207</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testDriver.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfM+v2McWUp0VO1+GFNL0g9AmMdceLYQQZHtzFrElV1old/31lZxCORraPp7BRrJmZ0YaLU9hy8cjPh2PI56wOI4mfLyDbVGZV9EgnqQ8mibxME6jHYTHFe2+0IrwgViR8umQw93iG8DX+e0a/DCDebaEExortQJpQapCN60gmdeYgsHvThos4fUMOOOjPoiCnKjDJGERvKi1KP3ywegGbpw1N7XMR0n4emVmNYte9vhTz8kgGk7i5+/5oz4etU3TTYtqlaWpVJKkqOUP7Jws1x9S2KyyfXa7WezfLNdvAdVJGq0aVAQnYaTwfkBpAosUGAGWCu5RoRF1Hw7aQI6WoEXjx41QBcJZUgUXRQhmOwwRmsDxVG5mW4OiBKHKy8Kn+eLd5xlV4a+96L3/l0bM+BVmMg5/Ezi/cSDPItX9FfBB1LZDh3flkymRsCAs0676l1AuVRnqScNZmyOIEBuh8kn0uyoj1NFC47zZHCHXzm/Lg/GhqJ2VJ4RFdhfULeu0ov9rhMFzulTRn40wvNIIf/PMGOttv1TeXysMgT4AVdiFA9pR6wjO/mQNNvrk3VgZ8vbp+VNELO0F7C+IrXRdhmoeDRLIHz0B2/V+AiRDVqw=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TRACERS_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TRACERS_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testTracers.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.42753</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testTracers.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU11r2zAUfc+vuI8bZKplO0kjyCDLPghbEtOtbBBCkO2bWsSWPOk6affrJzmDsVLY9laDjD7OPedIR0oEbPlkzKeTScTH7DqKR6N0B9uisq+iOLkWPJqmKU9EtIPwdUW7L4wmvCdWCD4dcbhdfAP4Or9Zg+9mMM+WcELrlNGgHChdmKaVpPIaBVj83imLJbyeAWd8PARZUCfrMEhZBC9qI0u/fLCmgavO2ata5eM0/L0yc4ZFLwfJI8/TJJrGz9/zR3M8GifEpkW9yoRQWpGStfqBvZPl+oOAzSrbZzebxf7Ncv0WUJ+UNbpBTXCSVknvB7QhcEiBEWCp4Q41WlkP4WAs5OgIWrS+30hdIJwVVXBRhGC2xxChDRx/ys1ca1GWIHV5Wfg0X7z7PKMqzLqL3vu/aSSMP8FMtsPfBJ3fOJBnUfruCfBB1q5Hh7byyZRIWBCWoq/+JZQrXYZ6MnA29ggyxEaofRLDvspKfXTQdN5sjpCbzm/Lg/G+qDunTgiL7DaoO9Zrxf/2EOLndKkeew4Pgf+fZ8bYYPul8v5aaQnMAajCPhwwHbUdwdmfrMXGnLwbp0LePj1/ioilu4D9BXGVqctQzaM4hfzBE7Dd4Cd+q1bW====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>TRIDIAGSOLVERS_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/TRIDIAGSOLVERS_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testTriDiagSolvers.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.343413</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "1" "--" "./testTriDiagSolvers.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNkVuL2zAQhd/7K85jC6nXcry5CFJI0wuhTWK2LC0sS5DtyUbEllxpnF366ys5hbKw0NcKJEbSzPnOMKnEnZhOxHw6TcUsEfn1VEzucVcd3ds0G8+kSOd5PpnJ9B5x9VW3r6xheuKkkmJ+LXC7+gF8X95sEcICy2KNMzmvrYH20KaybadYlw1JOPrZa0c13i0gEjEZQVXcqyZe8iTF68aqOnwfnG1x1Xt31ehyksczkBNvk/TNq/S55ywbZ3n2/3v+Yk8n66XcdWQ2hZTaaNaq0b9ocLLefpbYbYp9cbNb7d+vtx9A5qydNS0Zxlk5rYIfGMvwxFERWBs8kCGnmhEO1qEkz+jIhbhVpiI8aj7iQkQ0O+Qwk4saz3EL3zlSNZSpLx9fl6uP3xZ8jK/+wvv0L8Y4ES8os+vpr0AfGgcHFW0eXkg+qMYP2XFvwmRqYqqYajlU/wGV2tSxni0erTtBxbExmTCJ0VDllDl5tH0wWxJK24e2QjI9VU3v9ZmwKm4j3ScD6zdQlvGW====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>GSWC_CALL_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/GSWC_CALL_TEST</FullName>
+			<FullCommandLine>/lcrc/group/e3sm/ac.kimy/omega/cdash/gnu/01/external/GSW-C/gsw_check</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0489914</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/lcrc/group/e3sm/ac.kimy/omega/cdash/gnu/01/external/GSW-C/gsw_check</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJytU8tqwzAQvOsr5uhAY5I+aHrIoYSSYwI25FBKWMubWsSWjFZ2k7+vnFDIta33JBbtaGZntFyOVwprUxSCjGlHgT2SdbabYKOZrPv01FZGI3euLtwJ7oD8bZNN5zP07MU4i4d09oRkNVEjcloqhbxiYZBnhIqhK9ZH9FR3LDg4f2lKVwiHgdShszpENhL7FFBRzyiYLRS0s5Fq4BLGBocVDt41l/Ff6Fa3ypNb6ZNUqemIpbaeohRNNTKqjTXhfIdtlk2fF0rp/UB+L236x0JLInEVCV4WEyXtFU+PCyfHseBk2IBrONrzb7hxXXotxNVd4FuTPMdgNvHBnx7IlljFVLLvKZiYyZyblj2FzrNSQv+wU73nlZEo0V8+wJDnwBLPXWi7gC8SeG5cH+mIsZphAvikmUu5Xq48S+Xqcpiez+4fUZwjQPqhvgF96SXY====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>EOS_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/EOS_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "2" "--" "./testEos.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.17251</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "2" "--" "./testEos.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNUl2L2zAQfM+v2McWUp0Vx/bZkEKafhDaJObao4UQgmxvziK25Err5NpfX8kplIaD0rczyOhjdmak2SCDLU9iniZJwG9ZFKYhT3ewLWvzKpiEtxkP0uk0TbNgB/7ry25fakX4SKzMeBpxuF98A/g6v1uDm+Ywz5dwQmOlViAtSFXqthMkiwYzMPi9lwYreD0Dzng8BlFSLxq/mLIAXjRaVO74YHQLN701N40s4qn/O2VmNQtejoIrz2kcJ8nz9/xRH4/aZtmmQ7XKs0wqSVI08icOTpbrDxlsVvk+v9ss9m+W67eA6iSNVi0qgpMwUjg/oDSBRfKMAEsFD6jQiGYMB22gQEvQoXHzVqgS4SyphosieLMDhgiN5/hbbmY7g6ICoarLwaf54t3nGdV+11703v9LI2T8CWYyPf4h6N3FgRyLVA9PgA+isQPaj5VLpkLCkrDKhurfQoVUla8nDWdtjiB8bITKJTEeqoxQRwtt78wWCIXu3bUcGB/LprfyhLDI7726ZYMWv2qqSRpG0XVTRUHwnJrq2nMaJ1H4f54ZY6Ptl9r564Qh0AegGodwQPfU9QRn97IGW31ybqz0ebv03CsiVvYCdg1ia91UvpoHkykUPxwB241+AfhHVvI=</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>VERTCOORD_TEST</Name>
+			<Path>./test</Path>
+			<FullName>./test/VERTCOORD_TEST</FullName>
+			<FullCommandLine>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testVertCoord.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.44036</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/srun "--mpi=pmi2" "-l" "--kill-on-bad-exit" "--cpu_bind=cores" "-m" "plane=32" "-n" "8" "--" "./testVertCoord.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNU12L2zAQfM+v2McWUp2Vs+MPSCFNPwhtEnPt0UIIQbY3ZxFbcqV1cu2vr+QUSu8OSt/OYFu2ZmdGmlWUwZbHU57GccBTlgRhGKU72Ja1eRVMrpOMB2kYuXewA3/1ZbcvtSK8J1ZmPI043C6+AXyd36zBDXOY50s4obFSK5AWpCp12wmSRYMZGPzeS4MVvJ4BZ3w6BlFSLxr/EbIAXjRaVG76YHQLV701V40spqF/OmVmNQtejqIHnpMwSSfP3/NHfTxqm2WbDtUqzzKpJEnRyJ84OFmuP2SwWeX7/Gaz2L9Zrt8CqpM0WrWoCE7CSOH8gNIEFskzAiwV3KFCI5oxHLSBAi1Bh8aNW6FKhLOkGi6K4M0OGCI0nuNvuZntDIoKhKouE5/mi3efZ1T7v/ai9/5fGteMP8FMpsc/BL1bOJBjkeruCfBBNHZA+3vlkqmQsCSssqH6t1AhVeXrScNZmyMIHxuhckmMhyoj1NFC2zuzBUKhe7csB8b7sumtPCEs8luvbtmgFT46CDyKHjdV/Jya6qHnJIzj6f95ZoyNtl9q568ThkAfgGocwgHdU9cTnN3OGmz1ybmx0uft0nO7iFjZC9g1iK11U/lqHkxCKH44ArYb/QJS5Fcv====</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>Omega-0</Label>
+				<Label>SERIAL</Label>
+			</Labels>
+		</Test>
+		<EndDateTime>Nov 01 01:03 CDT</EndDateTime>
+		<EndTestTime>1761977021</EndTestTime>
+		<ElapsedMinutes>1</ElapsedMinutes>
+	</Testing>
+</Site>

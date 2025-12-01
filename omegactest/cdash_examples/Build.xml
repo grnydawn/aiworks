@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="unitest-develop-gnu"
+	BuildStamp="20251101-0601-Experimental"
+	Name="chrysalis"
+	Generator="ctest-3.24.2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="chr-0238"
+	OSRelease="4.18.0-513.5.1.el8_9.x86_64"
+	OSVersion="#1 SMP Fri Sep 29 05:21:10 EDT 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="23"
+	ModelID="49"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="128"
+	NumberOfPhysicalCPU="64"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="257143"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2400"
+	>
+	<Build>
+		<StartDateTime>Nov 01 01:01 CDT</StartDateTime>
+		<StartBuildTime>1761976879</StartBuildTime>
+		<BuildCommand>/lcrc/group/e3sm/ac.kimy/omega/cdash/gnu/01/omega_build.sh</BuildCommand>
+		<Warning>
+			<BuildLogLine>21</BuildLogLine>
+			<Text>Warning: Type mismatch between actual argument at (1) and actual argument at (2) (INTEGER(4)/LOGICAL(4)).</Text>
+			<SourceFile>/lcrc/group/e3sm/ac.kimy/omega/cdash/gnu/01/Warning: Type mismatch between actual argument at </SourceFile>
+			<SourceLineNumber>1</SourceLineNumber>
+			<PreContext>[  4%] Linking CXX static library libkokkossimd.a
+[  4%] Built target kokkossimd
+[  4%] Building CXX object external/ekat/extern/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o
+/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/gptl/perf_utils.F90:281:18:
+
+  281 |    call MPI_BCAST(vec,lsize,MPI_INTEGER,0,comm,ierr)
+      |                  1
+......
+  313 |    call MPI_BCAST(vec,lsize,MPI_LOGICAL,0,comm,ierr)
+      |                  2
+</PreContext>
+			<PostContext>[  4%] Building C object external/scorpio/src/gptl/CMakeFiles/gptl.dir/GPTLget_memusage.c.o
+[  4%] Building C object external/scorpio/src/gptl/CMakeFiles/gptl.dir/GPTLprint_memusage.c.o
+[  4%] Building C object external/scorpio/src/gptl/CMakeFiles/gptl.dir/GPTLutil.c.o
+[  4%] Building C object external/scorpio/src/gptl/CMakeFiles/gptl.dir/f_wrappers.c.o
+[  4%] No update step for 'gswteos'
+[  5%] No patch step for 'gswteos'
+[  5%] No configure step for 'gswteos'
+[  6%] Performing build step for 'gswteos'
+</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Warning>
+			<BuildLogLine>30</BuildLogLine>
+			<Text>make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.</Text>
+			<PreContext></PreContext>
+			<PostContext>[  7%] Building C object external/scorpio/src/gptl/CMakeFiles/gptl.dir/gptl.c.o
+/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/gptl/gptl.c: In function 'GPTLpr_summary_file':
+</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Warning>
+			<BuildLogLine>33</BuildLogLine>
+			<Text>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/gptl/gptl.c:3457:8: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]</Text>
+			<SourceFile>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/gptl/gptl.c</SourceFile>
+			<SourceLineNumber>3457</SourceLineNumber>
+			<PreContext></PreContext>
+			<PostContext> 3457 |   if (((int) comm) == 0)
+      |        ^
+[  7%] Building CXX object external/ekat/extern/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_CPUDiscovery.cpp.o
+[  7%] Building CXX object external/external/yaml-cpp/CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilderadapter.cpp.o
+[  7%] Building C object external/scorpio/src/gptl/CMakeFiles/gptl.dir/gptl_papi.c.o
+[  7%] Building CXX object external/ekat/extern/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Command_Line_Parsing.cpp.o
+[  7%] Building Fortran object external/scorpio/src/gptl/CMakeFiles/gptl.dir/perf_mod.F90.o
+/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/gptl/perf_mod.F90:1082:10:
+
+   38 |    use omp_lib, only :  omp_in_parallel</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Warning>
+			<BuildLogLine>48</BuildLogLine>
+			<Text>Warning: Type mismatch in function result (LOGICAL(4)/UNKNOWN) between (1) and (2)</Text>
+			<PreContext>      |       2   
+......
+ 1082 |       if (omp_in_parallel()) return
+      |          1
+</PreContext>
+			<PostContext>[  7%] Building CXX object external/external/yaml-cpp/CMakeFiles/yaml-cpp.dir/src/binary.cpp.o
+[  7%] Linking Fortran static library libgptl.a
+[  7%] Built target gptl
+[  7%] Building CXX object external/external/yaml-cpp/CMakeFiles/yaml-cpp.dir/src/convert.cpp.o
+Scanning dependencies of target libzstd_static
+[  7%] Building C object _deps/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/zstd-src/lib/common/debug.c.o
+[  7%] Building C object _deps/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/zstd-src/lib/common/entropy_common.c.o
+[  7%] Building C object _deps/zstd-build/lib/CMakeFiles/libzstd_static.dir/__/__/zstd-src/lib/common/error_private.c.o
+-- Configured git information in /.../01/external/ekat/extern/kokkos/generated/Kokkos_Version_Info.cpp
+[  7%] Built target AlwaysCheckGit</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Warning>
+			<BuildLogLine>256</BuildLogLine>
+			<Text>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp:1351:26: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]</Text>
+			<SourceFile>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp</SourceFile>
+			<SourceLineNumber>1351</SourceLineNumber>
+			<PreContext>[ 45%] Building C object _deps/libdwarf-build/src/lib/libdwarf/CMakeFiles/dwarf.dir/dwarf_tied.c.o
+[ 45%] Building C object _deps/libdwarf-build/src/lib/libdwarf/CMakeFiles/dwarf.dir/dwarf_str_offsets.c.o
+[ 46%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_nc4.cpp.o
+[ 46%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/bget.cpp.o
+[ 46%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_nc.cpp.o
+[ 46%] Building C object _deps/libdwarf-build/src/lib/libdwarf/CMakeFiles/dwarf.dir/dwarf_tsearchhash.c.o
+[ 47%] Building C object _deps/libdwarf-build/src/lib/libdwarf/CMakeFiles/dwarf.dir/dwarf_util.c.o
+[ 47%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_put_nc.cpp.o
+[ 47%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_get_nc.cpp.o
+/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp: In function 'void bpoold(void*, int, int)':
+</PreContext>
+			<PostContext> 1351 |             char *lerr = "";
+      |                          ^~
+</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Warning>
+			<BuildLogLine>259</BuildLogLine>
+			<Text>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp:1356:24: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]</Text>
+			<SourceFile>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp</SourceFile>
+			<SourceLineNumber>1356</SourceLineNumber>
+			<PreContext></PreContext>
+			<PostContext> 1356 |                 lerr = "  (Bad free list links)";
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp: In function 'int bpoolv(void*)':
+</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Warning>
+			<BuildLogLine>263</BuildLogLine>
+			<Text>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp:1394:26: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]</Text>
+			<SourceFile>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/scorpio/src/clib/bget.cpp</SourceFile>
+			<SourceLineNumber>1394</SourceLineNumber>
+			<PreContext></PreContext>
+			<PostContext> 1394 |             char *lerr = "";
+      |                          ^~
+[ 47%] Building C object _deps/libdwarf-build/src/lib/libdwarf/CMakeFiles/dwarf.dir/dwarf_xu_index.c.o
+[ 48%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_getput_int.cpp.o
+[ 48%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_msg.cpp.o
+[ 48%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_varm.cpp.o
+[ 48%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_darray.cpp.o
+[ 48%] Building C object _deps/libdwarf-build/src/lib/libdwarf/CMakeFiles/dwarf.dir/dwarf_print_lines.c.o
+[ 48%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/pio_darray_int.cpp.o
+[ 49%] Building CXX object external/scorpio/src/clib/CMakeFiles/pioc.dir/spio_hash.cpp.o</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Warning>
+			<BuildLogLine>369</BuildLogLine>
+			<Text>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/cpptrace/src/symbols/dwarf/dwarf_resolver.cpp:410:51: warning: 'line_table_opt.cpptrace::detail::optional&lt;std::reference_wrapper&lt;cpptrace::detail::libdwarf::line_table_info&gt;, 0&gt;::&lt;unnamed&gt;.cpptrace::detail::optional&lt;std::reference_wrapper&lt;cpptrace::detail::libdwarf::line_table_info&gt;, 0&gt;::._anon_99::uvalue.std::reference_wrapper&lt;cpptrace::detail::libdwarf::line_table_info&gt;::_M_data' may be used uninitialized in this function [-Wmaybe-uninitialized]</Text>
+			<SourceFile>/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/cpptrace/src/symbols/dwarf/dwarf_resolver.cpp</SourceFile>
+			<SourceLineNumber>410</SourceLineNumber>
+			<PreContext>[ 64%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_darray.F90.o
+[ 64%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_decomp.F90.o
+[ 64%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_util.F90.o
+[ 64%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_def_dim.F90.o
+[ 64%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_def_file.F90.o
+[ 65%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_def_var.F90.o
+[ 65%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_get_var.F90.o
+[ 66%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_init.F90.o
+[ 66%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_get_att.F90.o
+/lcrc/group/e3sm/soft/omega/cdash/Omega/externals/cpptrace/src/symbols/dwarf/dwarf_resolver.cpp: In lambda function:
+</PreContext>
+			<PostContext>  410 |                                     if(line_table.version != 5) {
+      |                                        ~~~~~~~~~~~^~~~~~~
+[ 66%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_inq_att.F90.o
+[ 67%] Linking CXX static library libcpptrace.a
+[ 68%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_inq_dim.F90.o
+[ 68%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_inq_file.F90.o
+[ 68%] Built target cpptrace-lib
+[ 68%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_inq_var.F90.o
+[ 68%] Building Fortran object external/scorpio/src/flib/CMakeFiles/piof.dir/spio_put_att.F90.o
+[ 68%] Building CXX object src/CMakeFiles/OmegaLib.dir/base/Broadcast.cpp.o</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Log Encoding="base64" Compression="bin/gzip"/>
+		<EndDateTime>Nov 01 01:02 CDT</EndDateTime>
+		<EndBuildTime>1761976957</EndBuildTime>
+		<ElapsedMinutes>1</ElapsedMinutes>
+	</Build>
+</Site>
