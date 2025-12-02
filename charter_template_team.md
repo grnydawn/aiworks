@@ -1,5 +1,14 @@
 # PROJECT CHARTER — MASTER TEMPLATE (Full Potential Version)
 
+## Revision History
+
+| Version | Date       | Author        | Description of Changes |
+|---------|------------|---------------|-------------------------|
+| 1.0     | 2025-01-01 | Youngsung Kim | Initial version created |
+| 1.1     | 2025-01-03 | Youngsung Kim | Updated scope and objectives |
+| 1.2     | 2025-01-05 | Youngsung Kim | Added timeline and risks |
+| 1.3     | 2025-01-06 | Youngsung Kim | Finalized deliverables |
+
 ---
 
 ## 1. Project Overview

@@ -1,5 +1,17 @@
 # PROJECT CHARTER — ONE-PERSON PROJECT TEMPLATE
 
+## Document Control
+
+**Current Version:** 1.3  
+**Last Updated:** 2025-01-06  
+**Owner:** Youngsung Kim
+
+### Change Log
+- **1.3 (2025-01-06)** — Finalized deliverables  
+- **1.2 (2025-01-05)** — Added risks  
+- **1.1 (2025-01-03)** — Updated scope  
+- **1.0 (2025-01-01)** — Initial version  
+
 ---
 
 ## 1. Project Overview
