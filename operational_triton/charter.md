@@ -1,179 +1,212 @@
-# PROJECT CHARTER — ONE-PERSON PROJECT TEMPLATE
+# PROJECT CHARTER — Operational TRITON
 
 ## Document Control
 
-**Current Version:** 1.3  
-**Last Updated:** 2025-01-06  
+**Current Version:** 0.1  
+**Last Updated:** 12/2/2025  
 **Owner:** Youngsung Kim
 
 ### Change Log
-- **1.3 (2025-01-06)** — Finalized deliverables  
-- **1.2 (2025-01-05)** — Added risks  
-- **1.1 (2025-01-03)** — Updated scope  
-- **1.0 (2025-01-01)** — Initial version  
+- **0.1 (2025-12-02)** — Working draft  
 
 ---
 
 ## 1. Project Overview
 
 ### 1.1 Project Title
-[Insert project name]
+Operational TRITON
 
 ### 1.2 Project Summary
-Briefly describe what the project will build and why it matters.
+This project aims to support the USAF in developing a scalable global flood inundation forecasting framework. It involves enhancing the existing end-to-end TRITON inundation forecasting workflow prototype at Osan AFB, improving automation and robustness, and scaling it to additional sites.
 
 ### 1.3 Background / Problem Statement
-- What problem are you solving?
-- Why is this the right time to build it?
+- **Problem:** Need for a robust, scalable global flood inundation forecasting framework for USAF operations.
+- **Context:** Building upon the NASA-ERDC-NGA-ORNL collaboration which explored GHI–LIS data subscription on HPC11 for TRITON testing. Previous work includes sharing datasets with ERDC for AutoRoute model development and ongoing coordination.
 
 ### 1.4 Vision Statement
-The ideal end-state once the project is complete.
+To integrate AutoRoute and TRITON into a unified forecasting framework, transitioning TRITON to operations on AFW HPC11, and leveraging it for high-resolution inundation modeling for critical areas of interest.
 
 ---
 
 ## 2. Objectives & Success Criteria
 
 ### 2.1 Project Objectives
-List 2–5 measurable goals.
+- Support USAF in developing a scalable global flood inundation forecasting framework.
+- Enhance the existing TRITON prototype at Osan AFB (automation & robustness).
+- Scale and expand the prototype to two additional sites (e.g., Offutt AFB, McConnell AFB).
+- Evaluate GHI–LIS runoff and streamflow products by validating impacts on simulated inundation extents.
+- Collaborate with ERDC to integrate AutoRoute and TRITON.
+- Assist USAF personnel in transitioning TRITON to operations on AFW HPC11.
 
 ### 2.2 Success Criteria
-Define what “successful completion” means for you:
-- Functional completeness  
-- Performance expectations  
-- Usability expectations  
-- Personal goals (learning, portfolio, productivity, etc.)
+- Successful deployment and operation of the enhanced TRITON workflow at Osan AFB.
+- Successful expansion to two additional sites.
+- Validation of GHI-LIS products against observations and benchmarks.
+- Operational transition of TRITON on AFW HPC11.
+- Functional "threshold-based trigger" capability.
 
 ---
 
 ## 3. Project Scope
 
 ### 3.1 In-Scope
-Features and components you *will* implement.
+- **Sites:** Osan AFB, Offutt AFB, McConnell AFB.
+- **Integration:** AutoRoute and TRITON unified framework.
+- **Validation:** GHI–LIS runoff and streamflow products.
+- **Operations:** Transition to AFW HPC11.
+- **Workflow:** Automation, robustness, and remote monitoring.
 
 ### 3.2 Out-of-Scope
-Features you explicitly *will not* implement.
+- [Suggest: Development of new hydrological models from scratch (using existing GHI-LIS/AutoRoute)]
+- [Suggest: Hardware procurement (using existing HPC11/private HPC)]
 
 ### 3.3 Assumptions
-Any conditions you assume will remain true (e.g., access to datasets, cluster resources, libraries).
+- Access to USAF data feeds and missing data (coordination required).
+- Availability of HPC11 and private HPC resources.
+- Continued collaboration with NASA, ERDC, NGA, and ORNL.
+- Data inputs available every 3 hours.
 
 ### 3.4 Constraints
-Time, tools, compute limits, or other constraints.
+- **System:** Must run on a private HPC system.
+- **Reliability:** High reliability required, potentially requiring dual execution for redundancy.
+- **Monitoring:** Operation must be remotely monitored.
+- **Data:** Data-availability check must run frequently (more than every 3 hours).
 
 ---
 
 ## 4. Deliverables
 
 ### 4.1 Main Deliverables
-- Final working software  
-- Documentation (README, usage instructions, API notes)  
-- Test results  
-- Deployment artifacts  
+- Enhanced TRITON workflow code and scripts.
+- Configuration for Osan, Offutt, and McConnell AFBs.
+- Validation report for GHI-LIS products.
+- Operational documentation for AFW HPC11 transition.
 
 ### 4.2 Interim Deliverables / Checkpoints
-Examples:
-- Initial design outline  
-- Prototype  
-- MVP  
-- Final polish pass  
+- Prototype enhancement at Osan AFB.
+- Deployment at first additional site.
+- Deployment at second additional site.
+- Integration test of AutoRoute and TRITON.
 
 ---
 
 ## 5. Requirements
 
 ### 5.1 Functional Requirements
-What the system must do (user actions, system behavior).
+- **Workflow Structure:** Three steps: Data Preparation → Simulation → Reporting.
+- **Automation:** Each step launches the next upon completion.
+- **Data Check:** First step checks for data availability before starting; checks more frequently than the 3-hour data update cycle.
+- **Trigger:** Threshold-based trigger for high-resolution modeling.
 
 ### 5.2 Non-Functional Requirements
-- Performance  
-- Reliability  
-- Ease of use  
-- Portability / environment support  
+- **Reliability:** High reliability, dual execution for redundancy.
+- **Scalability:** Support for multiple global sites.
+- **Latency:** Support Near Real-Time (NRT) operations.
 
 ### 5.3 Data & Resource Requirements
-- Input data  
-- Storage  
-- Compute/GPU needs  
-- External libraries or tools  
+- **Inputs:** GHI-LIS data, DEM, Manning’s n, stream network, streamflow, baseflow.
+- **Source:** /lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/ (and rsync script).
+- **Compute:** Private HPC system, AFW HPC11.
 
 ---
 
-## 6. High-Level Architecture (Optional for Solo Projects)
+## 6. High-Level Architecture
 
 ### 6.1 Architecture Summary
-A simple paragraph describing design or data flow.
+The system follows a linear pipeline: Data Preparation → Simulation → Reporting. It is event-driven, with data availability triggering the workflow. It is designed for HPC environments.
 
 ### 6.2 Technology Stack
-Languages, frameworks, platforms, compute resources.
+- **HPC:** AFW HPC11, Private HPC.
+- **Models:** TRITON, AutoRoute, GHI-LIS.
+- **Scripting:** Shell (rsync), likely Python/Bash for workflow orchestration.
 
 ---
 
 ## 7. Personal Workflow Plan
 
 ### 7.1 Development Workflow
-- Branching strategy (simple: `main` + feature branches)  
-- Commit frequency  
-- Coding conventions  
+- [Suggest: Git-based version control]
+- [Suggest: Regular syncs with USAF/ERDC]
 
 ### 7.2 Testing Strategy
-Unit tests? Smoke tests? Manual verification?
+- Validation against observations and benchmark datasets.
+- Intercomparison between TRITON and AutoRoute.
 
 ### 7.3 Development Process
-Suggested phases:
-1. Requirements  
-2. Design  
-3. Implementation  
-4. Testing  
-5. Packaging / Deployment  
+1. Analyze existing prototype (/lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/).
+2. Enhance automation and robustness.
+3. Deploy to new sites.
+4. Validate and Integrate.
+5. Transition to Operations.
 
 ---
 
 ## 8. Timeline & Milestones
 
-### 8.1 Timeline (Flexible for Solo Work)
-Provide expected duration or a rough timeframe (e.g., 4 weeks).
+### 8.1 Timeline
+[Suggest: Define timeline based on funding/project duration]
 
 ### 8.2 Milestones
-Examples:
-- M1: Prototype done  
-- M2: Core features implemented  
-- M3: Testing completed  
-- M4: Final release  
+- **M1:** Osan AFB prototype enhanced.
+- **M2:** AutoRoute integration design complete.
+- **M3:** Expansion to Offutt and McConnell AFBs.
+- **M4:** Operational transition to HPC11.
 
 ### 8.3 Completion Criteria per Milestone
-A few bullet points to define “done.”
+- Successful execution of workflow without manual intervention.
+- Validation metrics meeting defined thresholds.
 
 ---
 
-## 9. Risks & Mitigation (Lightweight)
+## 9. Risks & Mitigation
 
 ### 9.1 Primary Risks
-- Time availability  
-- Technical unknowns  
-- External dependencies  
+- Data feed interruptions or format changes.
+- Access issues with USAF HPC systems.
+- Integration challenges between different models.
 
 ### 9.2 Mitigation Strategies
-How you will reduce impact if risks occur.
+- Dual execution for redundancy.
+- Close coordination with USAF and ERDC points of contact.
 
 ---
 
 ## 10. Acceptance Criteria
-What must be true for you to declare the project finished.
+- Fully automated, robust forecasting workflow running on AFW HPC11.
+- Successful validation of inundation extents.
+- USAF personnel trained/capable of operating the system.
 
 ---
 
 ## 11. Version Control & Documentation
 
 ### 11.1 Repo Location
-[GitHub/GitLab URL]
+[Insert Repo URL]
 
 ### 11.2 Documentation Plan
-README, examples, usage instructions.
+- README for workflow setup.
+- Operational manual for monitoring and troubleshooting.
 
 ---
 
-## 12. Final Notes
-Any personal notes, stretch goals, or future enhancements.
+## 12. Stakeholders & Glossary
+
+### 12.1 Organizations
+- **NASA:** Spaceborne + global hydrology.
+- **ERDC:** Flood engineering for operations.
+- **NGA:** Geospatial/intel + terrain + population.
+- **ORNL:** Exascale modeling + impact analytics + data delivery.
+
+### 12.2 Glossary
+- **GFMS:** Global Flood Monitoring System
+- **GHI:** Global Hydrology Infrastructure
+- **LIS:** Land Information System
+- **NRT:** Near Real-Time (3–6 h latency)
+- **Medium Range:** Forecasts extending about 3–10 days ahead
+- **ERDC AutoRoute:** Rapid flood inundation model
 
 ---
 
-\*This template is intentionally simplified for one-person projects. Add more sections if needed, or remove any that don’t apply.
+## 13. Final Notes
+*Starting point script:* `/lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/scripts/00_rsync.sh`
+*Relevant files:* `/lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/`
