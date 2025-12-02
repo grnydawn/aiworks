@@ -1,0 +1,48 @@
+From Sudershan:
+ * This should be the starting point.. /lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/scripts/00_rsync.sh
+ * We also need to reach out to USAF for the data feed and missing data. Perhaps you can help me with it as well. 
+ * I copied relevant files in this folder /lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/
+
+What are done:
+* NASA-ERDC-NGA-ORNL collaboration 
+  - Explored GHI–LIS data subscription on HPC11 for TRITON testing (NRT and Medium Range) and advanced discussions with ERDC on global inundation forecasting, TRITON–AutoRoute intercomparison, and future collaboration. 
+  - Shared datasets with ERDC for AutoRoute model development at Offutt AFB (DEM, Manning’s n, stream network, streamflow, and baseflow), with ongoing coordination through monthly meetings. 
+
+What are planed:
+* Support the USAF in developing a scalable global flood inundation forecasting framework
+* Enhance the existing end-to-end TRITON inundation forecasting workflow prototype at Osan AFB by improving automation and robustness of the workflow.
+* Scale and expand the prototype to two additional sites (such as Offutt AFB, McConnell AFB) based on discussion with USAF. 
+* Evaluate GHI–LIS runoff and streamflow products by validating their impacts on simulated inundation extents, comparing results against observations and benchmark datasets. 
+* Collaborate with ERDC to integrate AutoRoute and TRITON into a unified forecasting framework, leverage TRITON for high resolution inundation modeling for critical areas of interest, and a threshold-based trigger. 
+* Assist USAF personnel transition TRITON to operations on AFW HPC11 using supplemental funding. 
+
+Organizations:
+* NASA = spaceborne + global hydrology
+* ERDC = flood engineering for operations
+* NGA = geospatial/intel + terrain + population
+* ORNL = exascale modeling + impact analytics + data delivery
+
+
+Glossary:
+* NASA: A U.S. federal agency responsible for the civilian space program, as well as aeronautics and space research.
+* ERDC: The research arm of the U.S. Army Corps of Engineers; focused on engineering, environmental, geospatial, hydraulics, and infrastructure sciences.
+* NGA: A U.S. government intelligence agency focused on geospatial intelligence (GEOINT) – mapping, imagery, spatial analytics.
+* ORNL: A multi-program U.S. Department of Energy national laboratory located in Oak Ridge, Tennessee, conducting advanced research in materials, supercomputing, energy, environment, and more.
+* GFMS: (Global Flood Monitoring System)
+* GHI: Global Hydrology Infrastructure (or Global Hydrology Initiative / Interface)
+* LIS: Land Information System
+* NRT: Near Real-Time, within a few hours of observation (e.g., 3–6 h latency)
+* Medium Range: forecasts extending about 3–10 days ahead
+* ERDC AutoRoute: rapid flood inundation model
+
+Structure:
+* Three steps: Data Preparation → Simulation → Reporting
+* Each step launches the next step when the current step is completed.
+* The first data step needs to check a folder to confirm whether the required data is available.
+* Once the data becomes available, the first step starts.
+* The data inputs are added every 3 hours, so the data-availability check should run more frequently than that.
+* The system should be highly reliable and may require dual execution for redundancy.
+* The system operation should be remotely monitored.
+* The system is intended to run on a private HPC system.
+
+
