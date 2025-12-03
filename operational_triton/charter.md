@@ -106,7 +106,7 @@ To integrate AutoRoute and TRITON into a unified forecasting framework, transiti
 ### 5.3 Data & Resource Requirements
 - **Inputs:** GHI-LIS data, DEM, Manning’s n, stream network, streamflow, baseflow.
 - **Source:** /lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/ (and rsync script).
-- **Compute:** Private HPC system, AFW HPC11.
+- **Compute:** AFW HPC11.
 
 ---
 
@@ -116,7 +116,7 @@ To integrate AutoRoute and TRITON into a unified forecasting framework, transiti
 The system follows a linear pipeline: Data Preparation → Simulation → Reporting. It is event-driven, with data availability triggering the workflow. It is designed for HPC environments.
 
 ### 6.2 Technology Stack
-- **HPC:** AFW HPC11, Private HPC.
+- **HPC:** AFW HPC11
 - **Models:** TRITON, AutoRoute, GHI-LIS.
 - **Scripting:** Shell (rsync), likely Python/Bash for workflow orchestration.
 
