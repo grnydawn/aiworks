@@ -1,4 +1,4 @@
-# PROJECT CHARTER — Operational TRITON
+# Operational TRITON
 
 ## Document Control
 
