@@ -64,13 +64,13 @@ To integrate AutoRoute and TRITON into a unified forecasting framework, transiti
 - Access to USAF data feeds and missing data (coordination required).
 - Availability of HPC11 and private HPC resources.
 - Continued collaboration with NASA, ERDC, NGA, and ORNL.
-- Data inputs available every 3 hours.
+- Data inputs available regularly.
 
 ### 3.4 Constraints
 - **System:** Must run on a private HPC system.
 - **Reliability:** High reliability required, potentially requiring dual execution for redundancy.
 - **Monitoring:** Operation must be remotely monitored.
-- **Data:** Data-availability check must run frequently (more than every 3 hours).
+- **Data:** Data-availability check must run frequently.
 
 ---
 
@@ -94,8 +94,9 @@ To integrate AutoRoute and TRITON into a unified forecasting framework, transiti
 
 ### 5.1 Functional Requirements
 - **Workflow Structure:** Three steps: Data Preparation → Simulation → Reporting.
+- **Composition:** Each step in the workflow works as a separate component.
 - **Automation:** Each step launches the next upon completion.
-- **Data Check:** First step checks for data availability before starting; checks more frequently than the 3-hour data update cycle.
+- **Data Check:** Each step checks for data availability before starting; checks more frequently than the data update cycle.
 - **Trigger:** Threshold-based trigger for high-resolution modeling.
 
 ### 5.2 Non-Functional Requirements
@@ -113,7 +114,7 @@ To integrate AutoRoute and TRITON into a unified forecasting framework, transiti
 ## 6. High-Level Architecture
 
 ### 6.1 Architecture Summary
-The system follows a linear pipeline: Data Preparation → Simulation → Reporting. It is event-driven, with data availability triggering the workflow. It is designed for HPC environments.
+The system follows a linear pipeline of independent components: Data Preparation → Simulation → Reporting. It is event-driven, with data availability of previous step triggering the next step. Each component runs as a separate process possibly on different nodes and different compute resources. It is designed to run on HPC environments.
 
 ### 6.2 Technology Stack
 - **HPC:** AFW HPC11

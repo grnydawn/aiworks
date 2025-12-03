@@ -25,12 +25,15 @@ We will investigate and analyze the following existing scripts in the `bin` fold
 - Refactor the investigated scripts to improve error handling, logging, and maintainability.
 - Modularize code to separate configuration from logic.
 
-### 3.2 Automation Improvements
-- Implement a robust data availability check that runs more frequently than the 3-hour data update cycle.
+### 3.2 Componentization
+- Split the refactored code into three components: Data Preparation, Simulation, and Reporting.
+
+### 3.3 Automation Improvements
+- Implement a robust data availability check that runs more frequently than the data update cycle.
 - Automate the workflow steps: Data Preparation → Simulation → Reporting.
 - Implement the threshold-based trigger mechanism.
 
-### 3.3 Reliability & Redundancy
+### 3.4 Reliability & Redundancy
 - Set up dual execution pipelines for redundancy.
 - Implement remote monitoring capabilities to track system health and workflow status.
 
