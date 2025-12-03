@@ -192,6 +192,7 @@ The system follows a linear pipeline: Data Preparation → Simulation → Report
 ## 12. Stakeholders & Glossary
 
 ### 12.1 Organizations
+- **USAF:** Project owner.
 - **NASA:** Spaceborne + global hydrology.
 - **ERDC:** Flood engineering for operations.
 - **NGA:** Geospatial/intel + terrain + population.
@@ -201,12 +202,7 @@ The system follows a linear pipeline: Data Preparation → Simulation → Report
 - **GFMS:** Global Flood Monitoring System
 - **GHI:** Global Hydrology Infrastructure
 - **LIS:** Land Information System
+- **TRITON:** Two-dimensional Runoff Inundation Toolkit for Operational Needs
 - **NRT:** Near Real-Time (3–6 h latency)
 - **Medium Range:** Forecasts extending about 3–10 days ahead
-- **ERDC AutoRoute:** Rapid flood inundation model
-
----
-
-## 13. Final Notes
-*Starting point script:* `/lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/scripts/00_rsync.sh`
-*Relevant files:* `/lustre/cyclone/nwp500/proj-shared/g7h/e2e_prototype/`
+- **AutoRoute:** Rapid flood inundation model
