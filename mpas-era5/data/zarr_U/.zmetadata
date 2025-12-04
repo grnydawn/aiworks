@@ -1,0 +1,716 @@
+{
+    "metadata": {
+        ".zattrs": {},
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "LSM/.zarray": {
+            "chunks": [
+                322,
+                322,
+                322
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "LSM/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "long_name": "land sea mask",
+            "units": ""
+        },
+        "Q/.zarray": {
+            "chunks": [
+                9,
+                4,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 9.999000260554009e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                15,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "Q/.zattrs": {
+            "QuantizeGranularBitGroomNumberOfSignificantDigits": 7,
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "level",
+                "latitude",
+                "longitude"
+            ],
+            "grid_specification": "0.28125\u00b0 x ~0.28125\u00b0 from 0E to 359.71875E and 89.78488N to 89.78488S (1280 x 640 Longitude/Gaussian Latitude), ~31km at Equator",
+            "long_name": "Specific humidity",
+            "maximum_value": 0.024997547268867493,
+            "minimum_value": -2.3369157133856788e-05,
+            "missing_value": 9.999000260554009e+20,
+            "original_data_representation": "N320 reduced Gaussian grid, ECMWF Meteorological Archival and Retrieval System (MARS)",
+            "original_format": "WMO GRIB 2",
+            "rda_dataset": "ds633.6",
+            "rda_dataset_doi": "DOI: 10.5065/XV5R-5344",
+            "rda_dataset_group": "ERA5 atmospheric model level analysis [netCDF4]",
+            "rda_dataset_url": "https:/rda.ucar.edu/datasets/ds633.6/",
+            "short_name": "q",
+            "standard_name": "specific_humidity",
+            "units": "kg kg**-1",
+            "wmo_center": 98,
+            "wmo_discipline": 0,
+            "wmo_local_table": 0,
+            "wmo_master_table": 5,
+            "wmo_parameter_category": 1,
+            "wmo_parameter_number": 0
+        },
+        "Q500/.zarray": {
+            "chunks": [
+                35,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "Q500/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "regrid_method": "bilinear"
+        },
+        "SP/.zarray": {
+            "chunks": [
+                35,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 9.999000260554009e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "SP/.zattrs": {
+            "QuantizeGranularBitGroomNumberOfSignificantDigits": 7,
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "ecmwf_local_table": 128,
+            "ecmwf_parameter_number": 134,
+            "grid_specification": "0.28125\u00b0 x ~0.28125\u00b0 from 0E to 359.71875E and 89.78488N to 89.78488S (1280 x 640 Longitude/Gaussian Latitude), ~31km at Equator",
+            "long_name": "Surface pressure",
+            "maximum_value": 105063.359375,
+            "minimum_value": 48399.38671875,
+            "missing_value": 9.999000260554009e+20,
+            "original_data_representation": "N320 reduced Gaussian grid, ECMWF Meteorological Archival and Retrieval System (MARS)",
+            "original_format": "WMO GRIB 1",
+            "rda_dataset": "ds633.6",
+            "rda_dataset_doi": "DOI: 10.5065/XV5R-5344",
+            "rda_dataset_group": "ERA5 atmospheric model level analysis [netCDF4]",
+            "rda_dataset_url": "https:/rda.ucar.edu/datasets/ds633.6/",
+            "short_name": "sp",
+            "standard_name": "surface_air_pressure",
+            "units": "Pa",
+            "wmo_center": 98
+        },
+        "T/.zarray": {
+            "chunks": [
+                9,
+                4,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 9.999000260554009e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                15,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "T/.zattrs": {
+            "QuantizeGranularBitGroomNumberOfSignificantDigits": 7,
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "level",
+                "latitude",
+                "longitude"
+            ],
+            "grid_specification": "0.28125\u00b0 x ~0.28125\u00b0 from 0E to 359.71875E and 89.78488N to 89.78488S (1280 x 640 Longitude/Gaussian Latitude), ~31km at Equator",
+            "long_name": "Temperature",
+            "maximum_value": 316.3302307128906,
+            "minimum_value": 156.44580078125,
+            "missing_value": 9.999000260554009e+20,
+            "original_data_representation": "T639 spherical harmonics, ECMWF Meteorological Archival and Retrieval System (MARS)",
+            "original_format": "WMO GRIB 2",
+            "rda_dataset": "ds633.6",
+            "rda_dataset_doi": "DOI: 10.5065/XV5R-5344",
+            "rda_dataset_group": "ERA5 atmospheric model level analysis [netCDF4]",
+            "rda_dataset_url": "https:/rda.ucar.edu/datasets/ds633.6/",
+            "short_name": "t",
+            "standard_name": "air_temperature",
+            "units": "K",
+            "wmo_center": 98,
+            "wmo_discipline": 0,
+            "wmo_local_table": 0,
+            "wmo_master_table": 5,
+            "wmo_parameter_category": 0,
+            "wmo_parameter_number": 0
+        },
+        "T500/.zarray": {
+            "chunks": [
+                35,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "T500/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "regrid_method": "bilinear"
+        },
+        "U/.zarray": {
+            "chunks": [
+                9,
+                4,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 9.999000260554009e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                15,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "U/.zattrs": {
+            "QuantizeGranularBitGroomNumberOfSignificantDigits": 7,
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "level",
+                "latitude",
+                "longitude"
+            ],
+            "grid_specification": "0.28125\u00b0 x ~0.28125\u00b0 from 0E to 359.71875E and 89.78488N to 89.78488S (1280 x 640 Longitude/Gaussian Latitude), ~31km at Equator",
+            "long_name": "U component of wind",
+            "maximum_value": 168.63519287109375,
+            "minimum_value": -130.04409790039062,
+            "missing_value": 9.999000260554009e+20,
+            "original_data_representation": "T639 spherical harmonics for vorticity and divergence, ECMWF Meteorological Archival and Retrieval System (MARS)",
+            "original_format": "WMO GRIB 2",
+            "rda_dataset": "ds633.6",
+            "rda_dataset_doi": "DOI: 10.5065/XV5R-5344",
+            "rda_dataset_group": "ERA5 atmospheric model level analysis [netCDF4]",
+            "rda_dataset_url": "https:/rda.ucar.edu/datasets/ds633.6/",
+            "short_name": "u",
+            "standard_name": "eastward_wind",
+            "units": "m s**-1",
+            "wmo_center": 98,
+            "wmo_discipline": 0,
+            "wmo_local_table": 0,
+            "wmo_master_table": 5,
+            "wmo_parameter_category": 2,
+            "wmo_parameter_number": 2
+        },
+        "U500/.zarray": {
+            "chunks": [
+                35,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "U500/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "regrid_method": "bilinear"
+        },
+        "V/.zarray": {
+            "chunks": [
+                9,
+                4,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 9.999000260554009e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                15,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "V/.zattrs": {
+            "QuantizeGranularBitGroomNumberOfSignificantDigits": 7,
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "level",
+                "latitude",
+                "longitude"
+            ],
+            "grid_specification": "0.28125\u00b0 x ~0.28125\u00b0 from 0E to 359.71875E and 89.78488N to 89.78488S (1280 x 640 Longitude/Gaussian Latitude), ~31km at Equator",
+            "long_name": "V component of wind",
+            "maximum_value": 132.98956298828125,
+            "minimum_value": -121.10556030273438,
+            "missing_value": 9.999000260554009e+20,
+            "original_data_representation": "T639 spherical harmonics for vorticity and divergence, ECMWF Meteorological Archival and Retrieval System (MARS)",
+            "original_format": "WMO GRIB 2",
+            "rda_dataset": "ds633.6",
+            "rda_dataset_doi": "DOI: 10.5065/XV5R-5344",
+            "rda_dataset_group": "ERA5 atmospheric model level analysis [netCDF4]",
+            "rda_dataset_url": "https:/rda.ucar.edu/datasets/ds633.6/",
+            "short_name": "v",
+            "standard_name": "northward_wind",
+            "units": "m s**-1",
+            "wmo_center": 98,
+            "wmo_discipline": 0,
+            "wmo_local_table": 0,
+            "wmo_master_table": 5,
+            "wmo_parameter_category": 2,
+            "wmo_parameter_number": 3
+        },
+        "V500/.zarray": {
+            "chunks": [
+                35,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "V500/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "regrid_method": "bilinear"
+        },
+        "Z500/.zarray": {
+            "chunks": [
+                35,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "Z500/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "regrid_method": "bilinear"
+        },
+        "Z_GDS4_SFC/.zarray": {
+            "chunks": [
+                322,
+                322,
+                322
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "Z_GDS4_SFC/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "long_name": "Geopotential",
+            "units": "m**2 s**-2"
+        },
+        "half_level/.zarray": {
+            "chunks": [
+                138
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i4",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                138
+            ],
+            "zarr_format": 2
+        },
+        "half_level/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "half_level"
+            ],
+            "alternate_name": "interface",
+            "formula": "p = a + b*ps",
+            "long_name": "half level",
+            "order": "top of atmosphere to surface",
+            "short_name": "hlev",
+            "units": "1"
+        },
+        "latitude/.zarray": {
+            "chunks": [
+                640
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                640
+            ],
+            "zarr_format": 2
+        },
+        "latitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "latitude"
+            ],
+            "long_name": "gaussian latitude",
+            "short_name": "lat",
+            "standard_name": "latitude",
+            "units": "degrees_north"
+        },
+        "level/.zarray": {
+            "chunks": [
+                15
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i4",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                15
+            ],
+            "zarr_format": 2
+        },
+        "level/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "level"
+            ],
+            "formula": "p = a + b*ps",
+            "long_name": "model level",
+            "order": "near top of atmosphere to near surface",
+            "short_name": "lev",
+            "standard_name": "atmosphere_hybrid_sigma_pressure_coordinate",
+            "units": "1"
+        },
+        "longitude/.zarray": {
+            "chunks": [
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "longitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "longitude"
+            ],
+            "long_name": "longitude",
+            "short_name": "lon",
+            "standard_name": "longitude",
+            "units": "degrees_east"
+        },
+        "t2m/.zarray": {
+            "chunks": [
+                35,
+                640,
+                1280
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "t2m/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "regrid_method": "bilinear"
+        },
+        "time/.zarray": {
+            "chunks": [
+                9504
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i4",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time"
+            ],
+            "calendar": "gregorian",
+            "units": "hours since 1900-01-01"
+        },
+        "tsi/.zarray": {
+            "chunks": [
+                322,
+                322,
+                322
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1460,
+                640,
+                1280
+            ],
+            "zarr_format": 2
+        },
+        "tsi/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "latitude",
+                "longitude"
+            ],
+            "long_name": "total solar irradiance",
+            "units": "J m-2"
+        }
+    },
+    "zarr_consolidated_format": 1
+}

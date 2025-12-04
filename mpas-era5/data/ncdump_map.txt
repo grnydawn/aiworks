@@ -1,0 +1,58 @@
+$ ncdump -h map_MPASA_QU20km_to_1440x720_bilinear.nc 
+netcdf map_MPASA_QU20km_to_1440x720_bilinear {
+dimensions:
+	n_a = 1480177 ;
+	n_b = 1036800 ;
+	n_s = 3110400 ;
+	nv_a = 8 ;
+	nv_b = 4 ;
+	num_wgts = 1 ;
+	src_grid_rank = 1 ;
+	dst_grid_rank = 2 ;
+variables:
+	int src_grid_dims(src_grid_rank) ;
+	int dst_grid_dims(dst_grid_rank) ;
+	double yc_a(n_a) ;
+		yc_a:units = "radians" ;
+	double yc_b(n_b) ;
+		yc_b:units = "degrees" ;
+	double xc_a(n_a) ;
+		xc_a:units = "radians" ;
+	double xc_b(n_b) ;
+		xc_b:units = "degrees" ;
+	double yv_a(n_a, nv_a) ;
+		yv_a:units = "radians" ;
+	double xv_a(n_a, nv_a) ;
+		xv_a:units = "radians" ;
+	double yv_b(n_b, nv_b) ;
+		yv_b:units = "degrees" ;
+	double xv_b(n_b, nv_b) ;
+		xv_b:units = "degrees" ;
+	int mask_a(n_a) ;
+		mask_a:units = "unitless" ;
+	int mask_b(n_b) ;
+		mask_b:units = "unitless" ;
+	double area_a(n_a) ;
+		area_a:units = "square radians" ;
+	double area_b(n_b) ;
+		area_b:units = "square radians" ;
+	double frac_a(n_a) ;
+		frac_a:units = "unitless" ;
+	double frac_b(n_b) ;
+		frac_b:units = "unitless" ;
+	int col(n_s) ;
+	int row(n_s) ;
+	double S(n_s) ;
+
+// global attributes:
+		:title = "ESMF Offline Regridding Weight Generator" ;
+		:normalization = "destarea" ;
+		:map_method = "Bilinear remapping" ;
+		:ESMF_regrid_method = "Bilinear" ;
+		:conventions = "NCAR-CSM" ;
+		:domain_a = "MPASA_QU20km_SCRIP.nc" ;
+		:domain_b = "720x1440_SCRIP.nc" ;
+		:grid_file_src = "MPASA_QU20km_SCRIP.nc" ;
+		:grid_file_dst = "720x1440_SCRIP.nc" ;
+		:ESMF_version = "(No version information available.)" ;
+}

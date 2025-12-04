@@ -1,0 +1,29 @@
+{
+    "QuantizeGranularBitGroomNumberOfSignificantDigits": 7,
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "level",
+        "latitude",
+        "longitude"
+    ],
+    "grid_specification": "0.28125\u00b0 x ~0.28125\u00b0 from 0E to 359.71875E and 89.78488N to 89.78488S (1280 x 640 Longitude/Gaussian Latitude), ~31km at Equator",
+    "long_name": "U component of wind",
+    "maximum_value": 168.63519287109375,
+    "minimum_value": -130.04409790039062,
+    "missing_value": 9.999000260554009e+20,
+    "original_data_representation": "T639 spherical harmonics for vorticity and divergence, ECMWF Meteorological Archival and Retrieval System (MARS)",
+    "original_format": "WMO GRIB 2",
+    "rda_dataset": "ds633.6",
+    "rda_dataset_doi": "DOI: 10.5065/XV5R-5344",
+    "rda_dataset_group": "ERA5 atmospheric model level analysis [netCDF4]",
+    "rda_dataset_url": "https:/rda.ucar.edu/datasets/ds633.6/",
+    "short_name": "u",
+    "standard_name": "eastward_wind",
+    "units": "m s**-1",
+    "wmo_center": 98,
+    "wmo_discipline": 0,
+    "wmo_local_table": 0,
+    "wmo_master_table": 5,
+    "wmo_parameter_category": 2,
+    "wmo_parameter_number": 2
+}

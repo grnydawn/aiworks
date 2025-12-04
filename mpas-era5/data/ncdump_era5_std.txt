@@ -1,0 +1,45 @@
+$ ncdump -h All_2010_staged.std.LatLonLev.nc 
+netcdf All_2010_staged.std.LatLonLev {
+dimensions:
+	level = 15 ;
+	latitude = 640 ;
+	longitude = 1280 ;
+	half_level = 138 ;
+variables:
+	float Q(level, latitude, longitude) ;
+		Q:_FillValue = NaNf ;
+	float SP(latitude, longitude) ;
+		SP:_FillValue = NaNf ;
+	float T(level, latitude, longitude) ;
+		T:_FillValue = NaNf ;
+	float U(level, latitude, longitude) ;
+		U:_FillValue = NaNf ;
+	float V(level, latitude, longitude) ;
+		V:_FillValue = NaNf ;
+	int half_level(half_level) ;
+		half_level:alternate_name = "interface" ;
+		half_level:formula = "p = a + b*ps" ;
+		half_level:long_name = "half level" ;
+		half_level:order = "top of atmosphere to surface" ;
+		half_level:short_name = "hlev" ;
+		half_level:units = "1" ;
+	double latitude(latitude) ;
+		latitude:_FillValue = NaN ;
+		latitude:long_name = "gaussian latitude" ;
+		latitude:short_name = "lat" ;
+		latitude:standard_name = "latitude" ;
+		latitude:units = "degrees_north" ;
+	int level(level) ;
+		level:formula = "p = a + b*ps" ;
+		level:long_name = "model level" ;
+		level:order = "near top of atmosphere to near surface" ;
+		level:short_name = "lev" ;
+		level:standard_name = "atmosphere_hybrid_sigma_pressure_coordinate" ;
+		level:units = "1" ;
+	double longitude(longitude) ;
+		longitude:_FillValue = NaN ;
+		longitude:long_name = "longitude" ;
+		longitude:short_name = "lon" ;
+		longitude:standard_name = "longitude" ;
+		longitude:units = "degrees_east" ;
+}

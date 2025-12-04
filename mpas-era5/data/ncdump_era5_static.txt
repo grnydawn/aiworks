@@ -1,0 +1,93 @@
+$ ncdump -h static_operation_ERA5_zhght.nc 
+netcdf static_operation_ERA5_zhght {
+dimensions:
+	time = UNLIMITED ; // (0 currently)
+	latitude = 640 ;
+	longitude = 1280 ;
+variables:
+	float SP(latitude, longitude) ;
+		SP:_FillValue = 9.999e+20f ;
+		SP:long_name = "Surface pressure" ;
+		SP:standard_name = "surface_air_pressure" ;
+		SP:short_name = "sp" ;
+		SP:units = "Pa" ;
+		SP:original_format = "WMO GRIB 1" ;
+		SP:wmo_center = 98 ;
+		SP:ecmwf_local_table = 128 ;
+		SP:ecmwf_parameter_number = 134 ;
+		SP:minimum_value = 49556.72f ;
+		SP:maximum_value = 103916.7f ;
+		string SP:grid_specification = "0.28125° x ~0.28125° from 0E to 359.71875E and 89.78488N to 89.78488S (1280 x 640 Longitude/Gaussian Latitude), ~31km at Equator" ;
+		SP:original_data_representation = "N320 reduced Gaussian grid, ECMWF Meteorological Archival and Retrieval System (MARS)" ;
+		SP:rda_dataset = "ds633.6" ;
+		SP:rda_dataset_url = "https:/rda.ucar.edu/datasets/ds633.6/" ;
+		SP:rda_dataset_doi = "DOI: 10.5065/XV5R-5344" ;
+		SP:rda_dataset_group = "ERA5 atmospheric model level analysis [netCDF4]" ;
+		SP:QuantizeGranularBitGroomNumberOfSignificantDigits = 7 ;
+		SP:coordinates = "initial_time0_hours time forecast_time1" ;
+		SP:missing_value = 9.999e+20f ;
+	double latitude(latitude) ;
+		latitude:_FillValue = NaN ;
+	double longitude(longitude) ;
+		longitude:_FillValue = NaN ;
+	int time ;
+		time:long_name = "time" ;
+		time:standard_name = "time" ;
+		time:units = "hours since 1900-01-01" ;
+		time:calendar = "gregorian" ;
+	int utc_date ;
+		utc_date:long_name = "UTC date yyyy-mm-dd hh:00:00 as yyyymmddhh" ;
+		utc_date:units = "Gregorian_year month day hour" ;
+		utc_date:coordinates = "initial_time0_hours time forecast_time1" ;
+	double weight(latitude) ;
+		weight:_FillValue = NaN ;
+		weight:long_name = "gaussian weight" ;
+		weight:short_name = "weight" ;
+		weight:units = "1" ;
+		weight:coordinates = "initial_time0_hours time forecast_time1" ;
+	double zero(latitude) ;
+		zero:_FillValue = NaN ;
+		zero:long_name = "gaussian zero" ;
+		zero:short_name = "zero" ;
+		zero:units = "1" ;
+		zero:coordinates = "initial_time0_hours time forecast_time1" ;
+	double initial_time0_hours ;
+		initial_time0_hours:_FillValue = NaN ;
+		initial_time0_hours:long_name = "initial time" ;
+		initial_time0_hours:units = "hours since 1800-01-01" ;
+		initial_time0_hours:calendar = "proleptic_gregorian" ;
+	int forecast_time1 ;
+		forecast_time1:long_name = "Forecast offset from initial time" ;
+		forecast_time1:units = "hours" ;
+	double Z_GDS4_SFC(latitude, longitude) ;
+		Z_GDS4_SFC:_FillValue = NaN ;
+		Z_GDS4_SFC:parameter_number = 129 ;
+		Z_GDS4_SFC:parameter_table_version = 128 ;
+		Z_GDS4_SFC:gds_grid_type = 4 ;
+		Z_GDS4_SFC:level_indicator = 1 ;
+		Z_GDS4_SFC:units = "m**2 s**-2" ;
+		Z_GDS4_SFC:long_name = "Geopotential" ;
+		Z_GDS4_SFC:center = "European Center for Medium-Range Weather Forecasts (RSMC)" ;
+		Z_GDS4_SFC:regrid_method = "bilinear" ;
+		Z_GDS4_SFC:coordinates = "initial_time0_hours time forecast_time1" ;
+
+// global attributes:
+		:RDA_DATASET = "ds633.6" ;
+		:RDA_DATASET_URL = "https:/rda.ucar.edu/datasets/ds633.6/" ;
+		:RDA_DATASET_DOI = "DOI: 10.5065/XV5R-5344" ;
+		:RDA_DATASET_GROUP = "ERA5 atmospheric model level analysis [netCDF4]" ;
+		:DATA_SOURCE = "Downloaded by NCAR/CISL/DECS from ECMWF\"s Meteorological Archival and Retrieval System (MARS): ERA5 GRIB 2 (and GRIB 1) data (T639 Spherical harmonics and N320 reduced Gaussian data)" ;
+		:DOWNLOAD_SPECIALIST = "Chi-Fan Shih, NCAR/CISL/DECS, chifan@ucar.edu" ;
+		:DATA_INTERPOLATION = "Computed by NCAR/CISL/DECS: ERA5 GRIB 2 (and GRIB 1)  T639/N320 data synthesized or interpolated to 1280 longitude x 640 Gaussian latitude GRIB 2 (and GRIB 1) gridded data using emoslib-4.3.9 (compiled with cmake with grib_api-1.14.7 and fftw-3.3.8 support for gnu/gfortran-9.1.0). NOTE: u-component and v-component of horizontal wind derived from spectral vorticity and divergence." ;
+		:COMPUTATIONAL_PLATFORM = "cheyenne supercomputer, NCAR-Wyoming Supercomputing Center (NWSC), https://www2.cisl.ucar.edu/" ;
+		:COMPUTATIONAL_SPECIALIST = "Dave Stepaniak, NCAR/CISL/DECS, davestep@ucar.edu" ;
+		:NETCDF_CONVERSION = "Conversion by NCAR/CISL/DECS: Conversion from synthesized or interpolated 1280 longitude x 640 Gaussian latitude GRIB 2 (and GRIB 1) gridded data to netCDF4/HDF5." ;
+		:NETCDF_VERSION = "4.8.1" ;
+		:Conventions = "CF-1.6" ;
+		:NETCDF_COMPRESSION = "Precision-preserving compression to netCDF4/HDF5 using NCO (see \"history\" and \"NCO\" global attributes below for specifics)." ;
+		:CONVERSION_AND_COMPRESSION_PLATFORM = "cheyenne node employed: Linux r1i5n15 4.12.14-95.51-default #1 SMP Fri Apr 17 08:14:12 UTC 2020 (c6bab98) x86_64 x86_64 x86_64 GNU/Linux" ;
+		:CONVERSION_AND_COMPRESSION_DATE = "Sun Jan 15 04:56:56 MST 2023" ;
+		:CONVERSION_AND_COMPRESSION_SPECIALIST = "Dave Stepaniak, NCAR/CISL/DECS, davestep@ucar.edu" ;
+		:history = "Sun Jan 15 04:56:58 2023: ncks -4 --ppc SP=7 e5.oper.an.ml.128_134_sp.regn320sc.2021060312_2021060317.unc.nc ./e5.oper.an.ml.128_134_sp.regn320sc.2021060312_2021060317.nc" ;
+		:NCO = "netCDF Operators version 5.0.3 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)" ;
+}
