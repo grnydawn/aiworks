@@ -117,10 +117,31 @@ class Converter:
                 # Concat along level dimension
                 combined = xr.concat(var_levels, dim='level')
                 combined = combined.assign_coords(level=valid_levels)
+                
+                # Ensure dimension order: (Time, level, latitude, longitude)
+                # If input was (Time, nCells), regridded is (Time, lat, lon)
+                # Concat adds level -> (level, Time, lat, lon) usually?
+                # Let's check dims.
+                if 'Time' in combined.dims:
+                     combined = combined.transpose('Time', 'level', 'latitude', 'longitude')
+                
                 out_ds[var_name] = combined
 
+        # Rename Time to time if present
+        if 'Time' in out_ds.dims:
+            out_ds = out_ds.rename({'Time': 'time'})
+        
+        # Ensure 2D variables are (time, latitude, longitude)
+        for var in out_ds.data_vars:
+            if 'level' not in out_ds[var].dims and 'time' in out_ds[var].dims:
+                out_ds[var] = out_ds[var].transpose('time', 'latitude', 'longitude')
+
         # Save
-        time_str = pd.to_datetime(ds.Time.values[0]).strftime('%Y%m%d%H')
+        time_val = ds.Time.values[0] if 'Time' in ds else (out_ds.time.values[0] if 'time' in out_ds else None)
+        if time_val is None:
+             raise ValueError("Could not find time dimension")
+             
+        time_str = pd.to_datetime(time_val).strftime('%Y%m%d%H')
         
         if output_format == 'zarr':
             output_path = os.path.join(self.output_dir, f"era5_converted_{time_str}.zarr")

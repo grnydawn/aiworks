@@ -61,3 +61,5 @@ def test_converter_process(tmp_path, mock_regridder):
     assert 't2m' in ds_out
     assert ds_out.dims['latitude'] == 2
     assert ds_out.dims['longitude'] == 2
+    assert 'time' in ds_out.dims
+    assert ds_out['SP'].dims == ('time', 'latitude', 'longitude')

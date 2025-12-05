@@ -45,7 +45,8 @@ def main():
         try:
             # Combine all processed files to compute global stats
             # Use nested combine to avoid issues with monotonic checks if files are already sorted
-            ds_combined = xr.open_mfdataset(zarr_paths, engine='zarr', combine='nested', concat_dim='Time')
+            # Note: converter now renames Time to time.
+            ds_combined = xr.open_mfdataset(zarr_paths, engine='zarr', combine='nested', concat_dim='time')
             compute_stats(ds_combined, args.output_dir)
             print("Statistics computed and saved.") 
         except Exception as e:

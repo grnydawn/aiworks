@@ -47,6 +47,8 @@ def test_functional_full_flow(tmp_path):
     assert ds_out['SP'].values[0, 0, 0] == 101325.0
     assert ds_out['t2m'].values[0, 0, 0] == 288.15
     assert ds_out['U500'].values[0, 0, 0] == 10.0
+    assert ds_out['SP'].dims == ('time', 'latitude', 'longitude')
+    assert ds_out['U500'].dims == ('time', 'latitude', 'longitude') # U500 is 2D in this test setup (single level extracted)
     
     # 5. Run Stats
     # Stats module expects zarr path by default in my implementation?

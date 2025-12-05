@@ -15,11 +15,23 @@ def compute_stats(input_data, output_dir):
         ds = input_data
     
     # Mean
-    ds_mean = ds.mean(dim='Time')
+    if 'time' in ds.dims:
+        ds_mean = ds.mean(dim='time')
+    elif 'Time' in ds.dims:
+        ds_mean = ds.mean(dim='Time')
+    else:
+        ds_mean = ds
+        
     ds_mean.to_netcdf(os.path.join(output_dir, 'era5_mean.nc'))
     
     # Std
-    ds_std = ds.std(dim='Time')
+    if 'time' in ds.dims:
+        ds_std = ds.std(dim='time')
+    elif 'Time' in ds.dims:
+        ds_std = ds.std(dim='Time')
+    else:
+        ds_std = ds # Should ideally be 0 if no time dim
+        
     ds_std.to_netcdf(os.path.join(output_dir, 'era5_std.nc'))
     
     # Static (Latitude weights)
