@@ -11,6 +11,7 @@ def main():
     parser.add_argument("--input_dir", required=True, help="Directory containing MPAS NetCDF files")
     parser.add_argument("--map_file", required=True, help="Path to regridding mapping NetCDF file")
     parser.add_argument("--output_dir", required=True, help="Directory to save output Zarr files")
+    parser.add_argument("--skip_conversion", action="store_true", help="Skip conversion and only combine existing files in temp_parts")
     
     args = parser.parse_args()
     
@@ -19,39 +20,43 @@ def main():
         
     converter = Converter(args.map_file, args.output_dir)
     
-    # Find files
-    files = sorted(glob.glob(os.path.join(args.input_dir, "*.nc")))
-    if not files:
-        print(f"No .nc files found in {args.input_dir}")
-        return
-
     # Create temp dir for intermediate files
     temp_dir = os.path.join(args.output_dir, "temp_parts")
     if not os.path.exists(temp_dir):
         os.makedirs(temp_dir)
 
     zarr_paths = []
-    for f in files:
-        print(f"Processing {f}...")
-        try:
-            # We temporarily save to temp_dir
-            # We need to modify converter to accept an output dir or we just pass temp_dir
-            # Converter takes output_dir in init. 
-            # Let's re-instantiate converter or modify it? 
-            # Converter.output_dir is public.
-            converter.output_dir = temp_dir
-            out_path = converter.process_file(f)
-            zarr_paths.append(out_path)
-        except Exception as e:
-            print(f"Failed to process {f}: {e}")
-            import traceback
-            traceback.print_exc()
+    
+    if not args.skip_conversion:
+        # Find files
+        files = sorted(glob.glob(os.path.join(args.input_dir, "*.nc")))
+        if not files:
+            print(f"No .nc files found in {args.input_dir}")
+            return
+
+        for f in files:
+            print(f"Processing {f}...")
+            try:
+                # We temporarily save to temp_dir
+                converter.output_dir = temp_dir
+                out_path = converter.process_file(f)
+                zarr_paths.append(out_path)
+            except Exception as e:
+                print(f"Failed to process {f}: {e}")
+                import traceback
+                traceback.print_exc()
+    else:
+        print(f"Skipping conversion. Looking for existing files in {temp_dir}...")
+        zarr_paths = sorted(glob.glob(os.path.join(temp_dir, "*.zarr")))
+        if not zarr_paths:
+            print(f"No Zarr files found in {temp_dir}")
+            return
             
     if zarr_paths:
         try:
             print("Combining files...")
             # Combine all processed files
-            ds_combined = xr.open_mfdataset(zarr_paths, engine='zarr', combine='nested', concat_dim='time')
+            ds_combined = xr.open_mfdataset(zarr_paths, engine='zarr', combine='nested', concat_dim='time', consolidated=False)
             
             # Determine start and end time
             times = pd.to_datetime(ds_combined.time.values)
@@ -60,6 +65,11 @@ def main():
             
             output_filename = f"SixHourly_TOTAL_{start_date}_{end_date}.zarr"
             output_path = os.path.join(args.output_dir, output_filename)
+            
+            # Clear encoding to avoid chunk mismatch errors
+            for var in ds_combined.variables:
+                if 'chunks' in ds_combined[var].encoding:
+                    del ds_combined[var].encoding['chunks']
             
             print(f"Saving combined dataset to {output_path}...")
             ds_combined.to_zarr(output_path, mode='w', consolidated=False)
