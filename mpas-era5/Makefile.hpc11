@@ -1,0 +1,36 @@
+DATA_DIR = /lustre/blizzard/nwp501/proj-shared/grnydawn/MPAS_ML_DATA
+INPUT_DIR = ${DATA_DIR}/mpas_ORI_output/2021/01
+OUTPUT_DIR = ${DATA_DIR}/zarr_output
+MAP_FILE = ${DATA_DIR}/map_MPASA_QU20km_to_1440x720_bilinear.nc
+
+REPO_DIR := /autofs/nccs-svm1_home1/grnydawn/repos/github/aiworks/mpas-era5
+FRONTIER_WORKDIR := /lustre/orion/cli115/scratch/grnydawn/tmpdir
+HPC11_PRJDIR := /autofs/nccs-svm1_proj/cli190/grnydawn/hpc11/credit
+REQTXT :=  ${REPO_DIR}/requirements.txt
+
+.PHONY: all build_wheel copy_wheel install_wheel run test clean
+
+all:
+
+PRERUN_BLD := module load cray-python/3.11.7 && mkdir -p ${FRONTIER_WORKDIR} && cd ${FRONTIER_WORKDIR} && rm -rf venv && python3 -m venv venv && source venv/bin/activate
+build_wheel:
+	${PRERUN_BLD} && pip wheel -r ${REQTXT} --no-deps -w ./wheels && pip wheel -r ${REQTXT}  -w ./wheels
+
+copy_wheel:
+	mkdir -p ${HPC11_PRJDIR} && cp -rf ${FRONTIER_WORKDIR}/wheels ${HPC11_PRJDIR}
+
+PRERUN_INS := cd ${HPC11_PRJDIR} && rm -rf venv && module load cray-python/3.11.7 && python3 -m venv venv && source venv/bin/activate
+install_wheel:
+	${PRERUN_INS} && pip install --no-index --find-links=./wheels -r ${REQTXT}
+
+run:
+	source ${HPC11_PRJDIR}/venv/bin/activate && export PYTHONPATH=$$PYTHONPATH:$$(pwd) && python -m src.main --input_dir $(INPUT_DIR) --map_file $(MAP_FILE) --output_dir $(OUTPUT_DIR)
+
+test:
+	source ${HPC11_PRJDIR}/venv/bin/activate && export PYTHONPATH=$PYTHONPATH:$(pwd) && pytest tests
+
+clean:
+	rm -rf $(OUTPUT_DIR)
+	rm -rf __pycache__
+	rm -rf src/__pycache__
+	rm -rf tests/__pycache__

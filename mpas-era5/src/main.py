@@ -1,6 +1,7 @@
 import argparse
 import os
 import glob
+import xarray as xr
 from .converter import Converter
 from .stats import compute_stats
 
@@ -42,15 +43,11 @@ def main():
         # Let's assume we want stats over the processed batch.
         # If we saved separate Zarrs, we can use open_mfdataset on them.
         try:
-            ds_combined = xr.open_mfdataset(zarr_paths, engine='zarr')
-            # We need to save this combined view to a temp zarr or pass ds directly to compute_stats?
-            # compute_stats takes a path. Let's modify compute_stats to take a dataset or path.
-            # Or just pass the first one if they are time-split.
-            # Actually, compute_stats opens a zarr path.
-            # Let's just run stats on the first file for now as a demo, or implement full stats later.
-            # The requirement says "generate mean, standard deviation... files".
-            # Usually this is over the whole period.
-            pass 
+            # Combine all processed files to compute global stats
+            # Use nested combine to avoid issues with monotonic checks if files are already sorted
+            ds_combined = xr.open_mfdataset(zarr_paths, engine='zarr', combine='nested', concat_dim='Time')
+            compute_stats(ds_combined, args.output_dir)
+            print("Statistics computed and saved.") 
         except Exception as e:
             print(f"Failed to compute stats: {e}")
 

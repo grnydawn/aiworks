@@ -5,3 +5,4 @@ scipy
 zarr
 netCDF4
 pytest
+dask

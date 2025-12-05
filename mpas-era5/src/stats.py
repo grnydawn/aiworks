@@ -2,14 +2,17 @@ import xarray as xr
 import numpy as np
 import os
 
-def compute_stats(zarr_path, output_dir):
+def compute_stats(input_data, output_dir):
     """
-    Computes mean, std, and static files from a Zarr or NetCDF dataset.
+    Computes mean, std, and static files from a Zarr/NetCDF dataset or path.
     """
-    if zarr_path.endswith('.nc'):
-        ds = xr.open_dataset(zarr_path)
+    if isinstance(input_data, (str, os.PathLike)):
+        if input_data.endswith('.nc'):
+            ds = xr.open_dataset(input_data)
+        else:
+            ds = xr.open_zarr(input_data)
     else:
-        ds = xr.open_zarr(zarr_path)
+        ds = input_data
     
     # Mean
     ds_mean = ds.mean(dim='Time')
