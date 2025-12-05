@@ -104,6 +104,10 @@ class Converter:
         
         # 1. Rename 'Time' (from MPAS) to 'forecast'
         if 'Time' in out_ds.dims:
+            # Capture initialization time BEFORE we standardize the Time dimension to integers
+            # This fixes the bug where everything became 1970-01-01
+            init_time = out_ds.Time.values[0]
+            
             # Standardize Time to integer steps (0, 1, 2, ...) to ensure alignment across files
             # This prevents dimension expansion when combining multiple files with different absolute times
             out_ds = out_ds.assign_coords(Time=np.arange(out_ds.sizes['Time']))
@@ -112,7 +116,7 @@ class Converter:
         # 2. Add 'time' dimension (Initialization time)
         # We take the first time value as the initialization time
         if 'forecast' in out_ds.dims:
-            init_time = out_ds.forecast.values[0]
+            # init_time was captured above
             out_ds = out_ds.expand_dims(time=[init_time])
             
         # 3. Transpose dimensions

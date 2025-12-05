@@ -1,6 +1,7 @@
 import pytest
 import xarray as xr
 import numpy as np
+import pandas as pd
 import os
 from src.converter import Converter
 
@@ -114,5 +115,10 @@ def test_forecast_dimension_standardization(tmp_path, mock_regridder):
     combined = xr.open_mfdataset(zarr_paths, engine='zarr', combine='nested', concat_dim='time')
     
     assert combined.dims['forecast'] == 5, f"Forecast dimension should remain 5, got {combined.dims['forecast']}"
+    assert combined.dims['forecast'] == 5, f"Forecast dimension should remain 5, got {combined.dims['forecast']}"
     assert combined.dims['time'] == 2
+    
+    # Verify that we preserved the years and didn't default to 1970
+    times = pd.to_datetime(combined.time.values)
+    assert (times.year == 2021).all(), f"Years should be 2021, got {times.year}"
 
