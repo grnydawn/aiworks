@@ -1,5 +1,6 @@
 DATA_DIR = /lustre/blizzard/nwp501/proj-shared/grnydawn/MPAS_ML_DATA
-INPUT_DIR = ${DATA_DIR}/mpas_ORI_output/2021/01
+INPUT_DIR = /lustre/storm/nwp501/proj-shared/hgkang/data_for_others/MPAS_ML_data/mpas_ORI_output/2021/01
+#INPUT_DIR = ${DATA_DIR}/mpas_ORI_output/2021/01
 OUTPUT_DIR = ${DATA_DIR}/zarr_output
 MAP_FILE = ${DATA_DIR}/map_MPASA_QU20km_to_1440x720_bilinear.nc
 
