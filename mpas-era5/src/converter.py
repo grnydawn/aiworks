@@ -30,34 +30,13 @@ class Converter:
     def process_file(self, input_file, output_format='zarr'):
         ds = load_mpas_dataset(input_file)
         
-        # Ensure we only take the first time step if multiple are present
-        # This avoids duplicating time steps if input files are forecast runs with overlaps
-        if 'Time' in ds.dims and ds.sizes['Time'] > 1:
-            ds = ds.isel(Time=slice(0, 1))
+        # We keep all time steps as 'forecast' steps
+        # The 'time' dimension will be the initialization time (first step)
         
         # ... (rest of logic is same until save) ...
         
         # Define mappings and derivations
-        # Target Variable -> (Source Variable, Derivation Function)
-        # If Source Variable is a list, function takes multiple args
-        
-        # We need to handle 3D variables (on pressure levels) and 2D variables
-        # MPAS file has pre-interpolated pressure levels: 50, 100, 200, 250, 500, 700, 850, 925
-        
-        # ERA5 typically expects separate files or variables for different levels or a 'level' dimension.
-        # Based on idea.txt, we are producing "ERA5-formatted Zarr files".
-        # It lists: U, V, T, Q, SP, t2m, U500, V500, T500, Z500, Q500
-        
-        # Let's assume we output separate variables for the single levels requested (500)
-        # and maybe full profiles if U, V, T, Q implies all levels?
-        # For simplicity and matching the explicit list, I will produce the specific variables listed.
-        # If "U" means U on all levels, I would need to combine them. 
-        # Given "U500" is listed separately, "U" might mean U on model levels? 
-        # But MPAS model levels are on unstructured grid. Regridding 3D unstructured to 3D lat/lon is heavy.
-        # The MPAS file provided ONLY has the interpolated pressure levels (50, 100... 925).
-        # So "U" probably means "U at all available pressure levels".
-        
-        # Let's construct a dataset with the requested variables.
+        # ...
         
         out_ds = xr.Dataset()
         
@@ -89,14 +68,13 @@ class Converter:
             out_ds['Q500'] = calculate_specific_humidity(rh, t, 50000.0)
             
         # 3. "U", "V", "T", "Q" (All levels)
-        # We need to combine the available levels into a 'level' dimension
         levels = [50, 100, 200, 250, 500, 700, 850, 925]
         
         for var_name, mpas_prefix, is_derived_q in [
             ('U', 'uzonal', False),
             ('V', 'umeridional', False),
             ('T', 'temperature', False),
-            ('Q', 'relhum', True) # Source is RH, we derive Q
+            ('Q', 'relhum', True) 
         ]:
             var_levels = []
             valid_levels = []
@@ -107,7 +85,6 @@ class Converter:
                     regridded = self.regridder.regrid(ds[mpas_var])
                     
                     if is_derived_q:
-                        # Need T for this level
                         t_var = f"temperature_{lvl}hPa"
                         if t_var in ds:
                             t_regridded = self.regridder.regrid(ds[t_var])
@@ -119,34 +96,35 @@ class Converter:
                     valid_levels.append(lvl)
             
             if var_levels:
-                # Concat along level dimension
                 combined = xr.concat(var_levels, dim='level')
                 combined = combined.assign_coords(level=valid_levels)
-                
-                # Ensure dimension order: (Time, level, latitude, longitude)
-                # If input was (Time, nCells), regridded is (Time, lat, lon)
-                # Concat adds level -> (level, Time, lat, lon) usually?
-                # Let's check dims.
-                if 'Time' in combined.dims:
-                     combined = combined.transpose('Time', 'level', 'latitude', 'longitude')
-                
                 out_ds[var_name] = combined
 
-        # Rename Time to time if present
-        if 'Time' in out_ds.dims:
-            out_ds = out_ds.rename({'Time': 'time'})
+        # Handle Dimensions: (time, forecast, level, latitude, longitude)
         
-        # Ensure 2D variables are (time, latitude, longitude)
+        # 1. Rename 'Time' (from MPAS) to 'forecast'
+        if 'Time' in out_ds.dims:
+            out_ds = out_ds.rename({'Time': 'forecast'})
+            
+        # 2. Add 'time' dimension (Initialization time)
+        # We take the first time value as the initialization time
+        if 'forecast' in out_ds.dims:
+            init_time = out_ds.forecast.values[0]
+            out_ds = out_ds.expand_dims(time=[init_time])
+            
+        # 3. Transpose dimensions
+        # 3D Variables: (time, forecast, level, latitude, longitude)
+        # 2D Variables: (time, forecast, latitude, longitude)
+        
         for var in out_ds.data_vars:
-            if 'level' not in out_ds[var].dims and 'time' in out_ds[var].dims:
-                out_ds[var] = out_ds[var].transpose('time', 'latitude', 'longitude')
+            dims = out_ds[var].dims
+            if 'level' in dims:
+                out_ds[var] = out_ds[var].transpose('time', 'forecast', 'level', 'latitude', 'longitude')
+            else:
+                out_ds[var] = out_ds[var].transpose('time', 'forecast', 'latitude', 'longitude')
 
         # Save
-        time_val = ds.Time.values[0] if 'Time' in ds else (out_ds.time.values[0] if 'time' in out_ds else None)
-        if time_val is None:
-             raise ValueError("Could not find time dimension")
-             
-        time_str = pd.to_datetime(time_val).strftime('%Y%m%d%H')
+        time_str = pd.to_datetime(init_time).strftime('%Y%m%d%H')
         
         if output_format == 'zarr':
             output_path = os.path.join(self.output_dir, f"era5_converted_{time_str}.zarr")

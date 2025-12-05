@@ -44,11 +44,12 @@ def test_functional_full_flow(tmp_path):
     
     # 4. Verify Output
     ds_out = xr.open_dataset(zarr_path)
-    assert ds_out['SP'].values[0, 0, 0] == 101325.0
-    assert ds_out['t2m'].values[0, 0, 0] == 288.15
-    assert ds_out['U500'].values[0, 0, 0] == 10.0
-    assert ds_out['SP'].dims == ('time', 'latitude', 'longitude')
-    assert ds_out['U500'].dims == ('time', 'latitude', 'longitude') # U500 is 2D in this test setup (single level extracted)
+    # Values might be slightly different due to dimension changes/broadcasting, but checks should be robust
+    assert ds_out['SP'].values[0, 0, 0, 0] == 101325.0
+    assert ds_out['t2m'].values[0, 0, 0, 0] == 288.15
+    assert ds_out['U500'].values[0, 0, 0, 0] == 10.0
+    assert ds_out['SP'].dims == ('time', 'forecast', 'latitude', 'longitude')
+    assert ds_out['U500'].dims == ('time', 'forecast', 'latitude', 'longitude')
     
     # 5. Run Stats
     # Stats module expects zarr path by default in my implementation?

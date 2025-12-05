@@ -15,22 +15,26 @@ def compute_stats(input_data, output_dir):
         ds = input_data
     
     # Mean
+    dims_to_mean = []
     if 'time' in ds.dims:
-        ds_mean = ds.mean(dim='time')
+        dims_to_mean.append('time')
+    if 'forecast' in ds.dims:
+        dims_to_mean.append('forecast')
     elif 'Time' in ds.dims:
-        ds_mean = ds.mean(dim='Time')
+        dims_to_mean.append('Time')
+        
+    if dims_to_mean:
+        ds_mean = ds.mean(dim=dims_to_mean)
     else:
         ds_mean = ds
         
     ds_mean.to_netcdf(os.path.join(output_dir, 'era5_mean.nc'))
     
     # Std
-    if 'time' in ds.dims:
-        ds_std = ds.std(dim='time')
-    elif 'Time' in ds.dims:
-        ds_std = ds.std(dim='Time')
+    if dims_to_mean:
+        ds_std = ds.std(dim=dims_to_mean)
     else:
-        ds_std = ds # Should ideally be 0 if no time dim
+        ds_std = ds 
         
     ds_std.to_netcdf(os.path.join(output_dir, 'era5_std.nc'))
     
