@@ -62,7 +62,7 @@ def main():
             output_path = os.path.join(args.output_dir, output_filename)
             
             print(f"Saving combined dataset to {output_path}...")
-            ds_combined.to_zarr(output_path, mode='w')
+            ds_combined.to_zarr(output_path, mode='w', consolidated=False)
             
             print("Computing statistics...")
             # Re-open the combined zarr to ensure we compute stats on the final artifact

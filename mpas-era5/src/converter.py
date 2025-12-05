@@ -145,7 +145,7 @@ class Converter:
         
         if output_format == 'zarr':
             output_path = os.path.join(self.output_dir, f"era5_converted_{time_str}.zarr")
-            out_ds.to_zarr(output_path, mode='w')
+            out_ds.to_zarr(output_path, mode='w', consolidated=False)
         elif output_format == 'netcdf':
             output_path = os.path.join(self.output_dir, f"era5_converted_{time_str}.nc")
             out_ds.to_netcdf(output_path)
