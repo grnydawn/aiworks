@@ -30,6 +30,11 @@ class Converter:
     def process_file(self, input_file, output_format='zarr'):
         ds = load_mpas_dataset(input_file)
         
+        # Ensure we only take the first time step if multiple are present
+        # This avoids duplicating time steps if input files are forecast runs with overlaps
+        if 'Time' in ds.dims and ds.sizes['Time'] > 1:
+            ds = ds.isel(Time=slice(0, 1))
+        
         # ... (rest of logic is same until save) ...
         
         # Define mappings and derivations
