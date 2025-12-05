@@ -104,6 +104,9 @@ class Converter:
         
         # 1. Rename 'Time' (from MPAS) to 'forecast'
         if 'Time' in out_ds.dims:
+            # Standardize Time to integer steps (0, 1, 2, ...) to ensure alignment across files
+            # This prevents dimension expansion when combining multiple files with different absolute times
+            out_ds = out_ds.assign_coords(Time=np.arange(out_ds.sizes['Time']))
             out_ds = out_ds.rename({'Time': 'forecast'})
             
         # 2. Add 'time' dimension (Initialization time)
