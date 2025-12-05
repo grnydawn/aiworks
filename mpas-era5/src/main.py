@@ -66,6 +66,10 @@ def main():
             output_filename = f"SixHourly_TOTAL_{start_date}_{end_date}.zarr"
             output_path = os.path.join(args.output_dir, output_filename)
             
+            # Rechunk to ensure uniform chunks for Zarr
+            # Using chunk size of 1 for time dimension to be safe and uniform
+            ds_combined = ds_combined.chunk({'time': 1})
+            
             # Clear encoding to avoid chunk mismatch errors
             for var in ds_combined.variables:
                 if 'chunks' in ds_combined[var].encoding:
